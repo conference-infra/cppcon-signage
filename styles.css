@@ -1,0 +1,404 @@
+/* Import Teko Font */
+@font-face {
+    font-family: 'Teko';
+    src: url('Teko-FontZillion/Fonts/teko-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('Teko-FontZillion/Fonts/teko-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('Teko-FontZillion/Fonts/teko-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('Teko-FontZillion/Fonts/teko-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Teko', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ffffff;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Main Container - 16:9 Vertical Layout */
+.signage-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+/* Top Row: Logo and Day of Week */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    height: 15vh;
+}
+
+.logo-container {
+    padding-left: 2rem;
+    flex: 1;
+}
+
+.conference-logo {
+    max-height: 15vh;
+    max-width: 80%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.day-display {
+    flex: 1;
+    text-align: right;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fdb834;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    padding-right: 2rem;
+}
+
+/* Middle Row: Upcoming Events */
+.middle-row {
+    flex: 1;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+}
+
+.events-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fdb834;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 45vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.event-item-social {
+    border-color: yellow;
+}
+
+.event-item-education {
+    border-color: lightgreen;
+}
+
+.event-item-keynote {
+    border-color: orange;
+}
+
+.event-item-registration {
+    border-color: gray;
+}
+
+.event-item-basics {
+    border-color: salmon;
+}
+
+.event-item-general {
+    border-color: rgb(112, 192, 219);
+}
+
+.event-item-tooling {
+    border-color: green;
+}
+
+.event-item-iso {
+    border-color: rgb(235, 166, 126);
+}
+
+.event-item-robotics {
+    border-color: rgb(211, 77, 211);
+}
+
+.event-item-scientific {
+    border-color: rgb(101, 238, 108);
+}
+
+.event-item-business {
+    border-color: rgb(41, 46, 59);
+}
+
+.event-item-embedded {
+    border-color: rgb(78, 123, 221);
+}
+
+.event-item-gamedev {
+    border-color: rgb(218, 155, 214);
+}
+
+/*.event-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+}*/
+
+.event-bullet {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(79, 195, 247, 0.3);
+}
+
+.event-bullet-social {
+    background-color: yellow;
+}
+
+.event-bullet-education {
+    background-color: lightgreen;
+}
+
+.event-bullet-keynote {
+    background-color: orange;
+}
+
+.event-bullet-registration {
+    background-color: gray;
+}
+
+.event-bullet-basics {
+    background-color: salmon;
+}
+
+.event-bullet-general {
+    background-color: rgb(112, 192, 219);
+}
+
+.event-bullet-iso {
+    background-color: rgb(235, 166, 126);
+}
+
+.event-bullet-tooling {
+    background-color: green;
+}
+
+.event-bullet-robotics {
+    background-color: rgb(211, 77, 211);
+}
+
+.event-bullet-scientific {
+    background-color: rgb(101, 238, 108);
+}
+
+.event-bullet-business {
+    background-color: rgb(41, 46, 59);
+}
+
+.event-bullet-embedded {
+    background-color: rgb(78, 123, 221);
+}
+
+.event-bullet-gamedev {
+    background-color: rgb(218, 155, 214);
+}
+
+.event-content {
+    flex: 1;
+}
+
+.event-title {
+    font-size: 2cm;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.event-time {
+    font-size: 1.5rem;
+    color: #b0bec5;
+    font-weight: 400;
+}
+
+.event-location {
+    font-size: 1.5rem;
+    color: #81c784;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    padding-right: 1rem;
+    float: left;
+}
+
+.event-speaker {
+    font-size: 1.5rem;
+    color: #fdb834;
+    font-weight: 400;
+    margin-top: 0.25rem;
+}
+
+/* Bottom Row: Ad Space */
+.bottom-row {
+    height: 15vh;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.ad-container {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-banner {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.ad-banner svg {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.ad-placeholder {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Scrollbar Styling */
+.events-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.events-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.events-list::-webkit-scrollbar-thumb {
+    background: rgba(79, 195, 247, 0.5);
+    border-radius: 4px;
+}
+
+.events-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(79, 195, 247, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .top-row, .middle-row, .bottom-row {
+        padding: 1.5rem 2rem;
+    }
+    
+    .day-display {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .event-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-row, .middle-row, .bottom-row {
+        padding: 1rem;
+    }
+    
+    .day-display {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .event-title {
+        font-size: 1.4rem;
+    }
+    
+    .event-item {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Animation for ad transitions */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: scale(0.95); }
+    10% { opacity: 1; transform: scale(1); }
+    90% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.95); }
+}
+
+.ad-banner.fade-transition {
+    animation: fadeInOut 0.5s ease-in-out;
+}

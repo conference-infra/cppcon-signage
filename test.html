@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CppCon Digital Signage - Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .warning { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #0056b3; }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CppCon Digital Signage - System Test</h1>
+    
+    <div class="test-section">
+        <h2>File Structure Check</h2>
+        <div id="file-check"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Font Loading Test</h2>
+        <div id="font-test"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Schedule Data Test</h2>
+        <div id="schedule-test"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Live Preview</h2>
+        <p>Click the button below to open the digital signage in a new window:</p>
+        <button onclick="openSignage()">Open Digital Signage</button>
+        <button onclick="openSignageFullscreen()">Open Fullscreen</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Embedded Preview</h2>
+        <iframe src="index.html" title="Digital Signage Preview"></iframe>
+    </div>
+
+    <script>
+        // File structure check
+        async function checkFiles() {
+            const files = [
+                'index.html',
+                'styles.css', 
+                'script.js',
+                'schedule.json',
+                'logo-colored_1.png',
+                'Teko-FontZillion/Fonts/teko-regular.ttf'
+            ];
+            
+            const fileCheck = document.getElementById('file-check');
+            let allGood = true;
+            
+            for (const file of files) {
+                try {
+                    const response = await fetch(file, { method: 'HEAD' });
+                    if (response.ok) {
+                        fileCheck.innerHTML += `<div class="status success">✓ ${file} - Found</div>`;
+                    } else {
+                        fileCheck.innerHTML += `<div class="status error">✗ ${file} - Not found</div>`;
+                        allGood = false;
+                    }
+                } catch (error) {
+                    fileCheck.innerHTML += `<div class="status error">✗ ${file} - Error: ${error.message}</div>`;
+                    allGood = false;
+                }
+            }
+            
+            if (allGood) {
+                fileCheck.innerHTML += `<div class="status success">All required files are present!</div>`;
+            } else {
+                fileCheck.innerHTML += `<div class="status warning">Some files are missing. Please check the file structure.</div>`;
+            }
+        }
+
+        // Font loading test
+        async function testFonts() {
+            const fontTest = document.getElementById('font-test');
+            
+            // Test if fonts are loaded
+            await document.fonts.ready;
+            
+            const fonts = ['Teko', 'Arial'];
+            for (const font of fonts) {
+                if (document.fonts.check(`12px ${font}`)) {
+                    fontTest.innerHTML += `<div class="status success">✓ ${font} font is available</div>`;
+                } else {
+                    fontTest.innerHTML += `<div class="status warning">⚠ ${font} font may not be loaded</div>`;
+                }
+            }
+        }
+
+        // Schedule data test
+        async function testSchedule() {
+            const scheduleTest = document.getElementById('schedule-test');
+            
+            try {
+                const response = await fetch('schedule.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.events && Array.isArray(data.events)) {
+                    scheduleTest.innerHTML += `<div class="status success">✓ Schedule data loaded successfully</div>`;
+                    scheduleTest.innerHTML += `<div class="status success">Found ${data.events.length} events</div>`;
+                    
+                    // Check for events today
+                    const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+                    const todayEvents = data.events.filter(e => e.day === today);
+                    scheduleTest.innerHTML += `<div class="status success">${todayEvents.length} events scheduled for ${today}</div>`;
+                } else {
+                    scheduleTest.innerHTML += `<div class="status error">✗ Invalid schedule data format</div>`;
+                }
+            } catch (error) {
+                scheduleTest.innerHTML += `<div class="status error">✗ Error loading schedule: ${error.message}</div>`;
+            }
+        }
+
+        // Open signage functions
+        function openSignage() {
+            window.open('index.html', '_blank', 'width=1920,height=1080');
+        }
+
+        function openSignageFullscreen() {
+            const win = window.open('index.html', '_blank', 'width=1920,height=1080');
+            win.addEventListener('load', () => {
+                win.document.documentElement.requestFullscreen();
+            });
+        }
+
+        // Run tests when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            checkFiles();
+            testFonts();
+            testSchedule();
+        });
+    </script>
+</body>
+</html>
