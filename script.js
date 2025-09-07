@@ -64,7 +64,7 @@ class DigitalSignage {
     }
 
     getUpcomingEvents() {
-        const now = new Date("2025-09-16T09:00:00");
+        const now = new Date("2025-09-15T09:00:00");
         const currentTime = now.getHours() * 60 + now.getMinutes();
         const currentDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][now.getDay()];
 
