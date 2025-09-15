@@ -41,7 +41,7 @@
       "date": "Sat Sep 13 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_1",
+      "location": "Summit 10",
       "category": "general",
       "speaker": "Nicolai Josuttis"
     },
@@ -51,7 +51,7 @@
       "date": "Sat Sep 13 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_3",
+      "location": "Summit 11",
       "category": "general",
       "speaker": "Jason Turner"
     },
@@ -61,7 +61,7 @@
       "date": "Sat Sep 13 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_7",
+      "location": "Summit  7",
       "category": "general",
       "speaker": "Fedor Pikus"
     },
@@ -71,7 +71,7 @@
       "date": "Sat Sep 13 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_8",
+      "location": "Summit  9",
       "category": "general",
       "speaker": "Mateusz Pusz"
     },
@@ -81,7 +81,7 @@
       "date": "Sat Sep 13 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_9",
+      "location": "Summit  8",
       "category": "general",
       "speaker": "Andrei Alexandrescu,Laura Savino,Sherry Sontag"
     },
@@ -91,7 +91,7 @@
       "date": "Sun Sep 14 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_1",
+      "location": "Summit 10",
       "category": "general",
       "speaker": "Nicolai Josuttis"
     },
@@ -101,7 +101,7 @@
       "date": "Sun Sep 14 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_3",
+      "location": "Summit 11",
       "category": "general",
       "speaker": "Jason Turner"
     },
@@ -111,7 +111,7 @@
       "date": "Sun Sep 14 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_7",
+      "location": "Summit  7",
       "category": "general",
       "speaker": "Fedor Pikus"
     },
@@ -121,7 +121,7 @@
       "date": "Sun Sep 14 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_8",
+      "location": "Summit  9",
       "category": "general",
       "speaker": "Mateusz Pusz"
     },
@@ -131,7 +131,7 @@
       "date": "Sun Sep 14 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_9",
+      "location": "Summit  8",
       "category": "general",
       "speaker": "Andrei Alexandrescu,Laura Savino,Sherry Sontag"
     },
@@ -161,9 +161,9 @@
       "date": "Sun Sep 14 20:00:00 2025",
       "time": "20:00",
       "duration": 120,
-      "location": "TBA",
+      "location": "Valley 3",
       "category": "social",
-      "speaker": ""
+      "speaker": "Jon Kalb"
     },
     {
       "id": "4e8d1129d6a4ddac791f52244e276710",
@@ -171,7 +171,7 @@
       "date": "Mon Sep 15 08:00:00 2025",
       "time": "08:00",
       "duration": 45,
-      "location": "TBA",
+      "location": "Valley 3",
       "category": "registration",
       "speaker": ""
     },
@@ -181,7 +181,7 @@
       "date": "Mon Sep 15 08:45:00 2025",
       "time": "08:45",
       "duration": 105,
-      "location": "Aurora BCD",
+      "location": "Aurora B/C/D",
       "category": "general",
       "speaker": "Bjarne Stroustrup"
     },
@@ -191,7 +191,7 @@
       "date": "Mon Sep 15 10:30:00 2025",
       "time": "10:30",
       "duration": 15,
-      "location": "Aurora BCD",
+      "location": "Aurora B/C/D",
       "category": "general",
       "speaker": ""
     },
@@ -201,7 +201,7 @@
       "date": "Mon Sep 15 11:00:00 2025",
       "time": "11:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Nicolai Josuttis"
     },
@@ -211,7 +211,7 @@
       "date": "Mon Sep 15 11:00:00 2025",
       "time": "11:00",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Khalil Estell"
     },
@@ -221,7 +221,7 @@
       "date": "Mon Sep 15 11:00:00 2025",
       "time": "11:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Kris Jusiak"
     },
@@ -231,7 +231,7 @@
       "date": "Mon Sep 15 11:00:00 2025",
       "time": "11:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Herb Sutter"
     },
@@ -241,7 +241,7 @@
       "date": "Mon Sep 15 11:00:00 2025",
       "time": "11:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Greg von Winckel"
     },
@@ -251,7 +251,7 @@
       "date": "Mon Sep 15 12:30:00 2025",
       "time": "12:30",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Matt Godbolt"
     },
@@ -261,7 +261,7 @@
       "date": "Mon Sep 15 12:30:00 2025",
       "time": "12:30",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Jon Kalb"
     },
@@ -271,7 +271,7 @@
       "date": "Mon Sep 15 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Mateusz Pusz"
     },
@@ -281,7 +281,7 @@
       "date": "Mon Sep 15 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Jody Hagins"
     },
@@ -291,7 +291,7 @@
       "date": "Mon Sep 15 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Barry Revzin"
     },
@@ -301,7 +301,7 @@
       "date": "Mon Sep 15 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Steve Bronder"
     },
@@ -311,7 +311,7 @@
       "date": "Mon Sep 15 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Hui Xie"
     },
@@ -321,7 +321,7 @@
       "date": "Mon Sep 15 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Assaf Tzur-El"
     },
@@ -331,7 +331,7 @@
       "date": "Mon Sep 15 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Keith Stockdale"
     },
@@ -341,7 +341,7 @@
       "date": "Mon Sep 15 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Luis Caro Campos"
     },
@@ -351,7 +351,7 @@
       "date": "Mon Sep 15 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Erez Strauss"
     },
@@ -361,7 +361,7 @@
       "date": "Mon Sep 15 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Alecto Irene Perez"
     },
@@ -371,7 +371,7 @@
       "date": "Mon Sep 15 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Ben Saks"
     },
@@ -381,7 +381,7 @@
       "date": "Mon Sep 15 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  2/3",
       "category": "gamedev",
       "speaker": "Chu Yi Herr"
     },
@@ -391,17 +391,17 @@
       "date": "Mon Sep 15 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Chandranath Bhattacharyya,Bharat Kumar"
     },
     {
       "id": "3bc599c18ae5a1b220b36b05487d7b38",
-      "title": "How to Affect the Future of C++ Standard in 90 Minutes",
+      "title": "How to Affect the Future of C++ Standard in 60 Minutes",
       "date": "Mon Sep 15 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "River Wu"
     },
@@ -411,7 +411,7 @@
       "date": "Mon Sep 15 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Andy Soffer"
     },
@@ -433,7 +433,17 @@
       "duration": 120,
       "location": "Aurora A",
       "category": "social",
-      "speaker": "Sebastian Theophil,Jonathan Müller,Christian Klöckner,Timur Doumler"
+      "speaker": "Timur Doumler,Sebastian Theophil,Jonathan Müller,Christian Klöckner"
+    },
+    {
+      "id": "6446b61d584c8e229b008ad566da5fe8",
+      "title": "Agentic Debugging: From Guesswork to Root Cause with AI",
+      "date": "Mon Sep 15 18:30:00 2025",
+      "time": "18:30",
+      "duration": 90,
+      "location": "Summit  8/9",
+      "category": "robotics",
+      "speaker": "Matt Godbolt,Daisy Hollman,Mark Williamson"
     },
     {
       "id": "5e531d4eb6de3ec20a3f858116ce8efc",
@@ -441,9 +451,9 @@
       "date": "Mon Sep 15 20:30:00 2025",
       "time": "20:30",
       "duration": 90,
-      "location": "Aurora BCD",
+      "location": "Aurora B/C/D",
       "category": "general",
-      "speaker": "Andrei Alexandrescu,Barry Revzin,Bjarne Stroustrup,Daisy Hollman,Gabriel Dos Reis,Guy Davidson,Inbal Levi,Jeff Garland,Khalil Estell,Nina Ranns,Ruslan Arutyunyan,Timur Doumler,Vittorio Romeo"
+      "speaker": "Jeff Garland,Andrei Alexandrescu,Bjarne Stroustrup,Gabriel Dos Reis,Guy Davidson,Timur Doumler,Barry Revzin,Inbal Levi,Nina Ranns,Khalil Estell,Vittorio Romeo,Ruslan Arutyunyan,Daisy Hollman,Herb Sutter"
     },
     {
       "id": "fcf8cf0241619565ed2459016be5f414",
@@ -451,9 +461,19 @@
       "date": "Tue Sep 16 07:15:00 2025",
       "time": "07:15",
       "duration": 90,
-      "location": "Stage 1",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Jon Kalb"
+    },
+    {
+      "id": "8acef2bbc0cf66eedab672dd06fdb5e1",
+      "title": "r/AskTowerAnything",
+      "date": "Tue Sep 16 08:00:00 2025",
+      "time": "08:00",
+      "duration": 45,
+      "location": "Summit  8/9",
+      "category": "general",
+      "speaker": "Radoslav Zlatev,Vincent Marsicano"
     },
     {
       "id": "d7c6f6a1270cd760a1abe51dce220bbd",
@@ -461,7 +481,7 @@
       "date": "Tue Sep 16 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Amir Kirsh"
     },
@@ -471,7 +491,7 @@
       "date": "Tue Sep 16 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Alexandra Kemper"
     },
@@ -481,7 +501,7 @@
       "date": "Tue Sep 16 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Vishnu Sudheer Menon"
     },
@@ -491,7 +511,7 @@
       "date": "Tue Sep 16 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Andrew Drakeford"
     },
@@ -501,7 +521,7 @@
       "date": "Tue Sep 16 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Richard Powell"
     },
@@ -511,7 +531,7 @@
       "date": "Tue Sep 16 10:30:00 2025",
       "time": "10:30",
       "duration": 90,
-      "location": "Aurora BCD",
+      "location": "Aurora B/C/D",
       "category": "robotics",
       "speaker": "Daisy Hollman"
     },
@@ -521,7 +541,7 @@
       "date": "Tue Sep 16 12:00:00 2025",
       "time": "12:00",
       "duration": 30,
-      "location": "CppCache",
+      "location": "Exhibit Hall",
       "category": "robotics",
       "speaker": "Nicolai Josuttis"
     },
@@ -541,9 +561,9 @@
       "date": "Tue Sep 16 12:30:00 2025",
       "time": "12:30",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  8/9",
       "category": "general",
-      "speaker": "Rajesh Gangam,Chirag Goyal"
+      "speaker": "Chris Croft-White,Rajesh Gangam"
     },
     {
       "id": "548c20a3454e600bbca031d855afa6d6",
@@ -551,7 +571,7 @@
       "date": "Tue Sep 16 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Chandranath Bhattacharyya,Kathleen Baker"
     },
@@ -561,7 +581,7 @@
       "date": "Tue Sep 16 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Paul E. McKenney,Maged Michael,Michael Wong"
     },
@@ -571,7 +591,7 @@
       "date": "Tue Sep 16 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Augustin Popa,David Li"
     },
@@ -581,7 +601,7 @@
       "date": "Tue Sep 16 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Jubin Chheda"
     },
@@ -591,7 +611,7 @@
       "date": "Tue Sep 16 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Egor Suvorov"
     },
@@ -601,7 +621,7 @@
       "date": "Tue Sep 16 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Grace Alwan"
     },
@@ -611,7 +631,7 @@
       "date": "Tue Sep 16 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Hamish Morrison"
     },
@@ -621,7 +641,7 @@
       "date": "Tue Sep 16 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Vitaly Fanaskov"
     },
@@ -631,7 +651,7 @@
       "date": "Tue Sep 16 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Steve Downey"
     },
@@ -641,7 +661,7 @@
       "date": "Tue Sep 16 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Zartaj Majeed"
     },
@@ -651,7 +671,7 @@
       "date": "Tue Sep 16 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Nevin Liber"
     },
@@ -661,7 +681,7 @@
       "date": "Tue Sep 16 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Ben Deane"
     },
@@ -671,7 +691,7 @@
       "date": "Tue Sep 16 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Jonathan Müller"
     },
@@ -681,7 +701,7 @@
       "date": "Tue Sep 16 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Andrei Alexandrescu"
     },
@@ -691,7 +711,7 @@
       "date": "Tue Sep 16 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Alex Dathskovsky"
     },
@@ -701,19 +721,19 @@
       "date": "Tue Sep 16 20:30:00 2025",
       "time": "20:30",
       "duration": 90,
-      "location": "Aurora BCD",
+      "location": "Aurora B/C/D",
       "category": "robotics",
-      "speaker": "Daisy Hollman,Jason Turner,Matt Godbolt,Guy Davidson"
+      "speaker": "Jason Turner,Guy Davidson,Matt Godbolt,Daisy Hollman"
     },
     {
-      "id": "6446b61d584c8e229b008ad566da5fe8",
-      "title": "Agentic Debugging: From Guesswork to Root Cause with AI",
-      "date": "Wed Sep 17 07:45:00 2025",
-      "time": "07:45",
-      "duration": 60,
-      "location": "Stage 1",
-      "category": "robotics",
-      "speaker": "Daisy Hollman,Mark Williamson,Matt Godbolt"
+      "id": "8fc222a1e1f195fe6dcc6bcdced096b2",
+      "title": "Beman Project Meetup",
+      "date": "Wed Sep 17 08:00:00 2025",
+      "time": "08:00",
+      "duration": 45,
+      "location": "Summit  8/9",
+      "category": "general",
+      "speaker": "Jeff Garland"
     },
     {
       "id": "792899054fc9e103373b2e8656646627",
@@ -721,7 +741,7 @@
       "date": "Wed Sep 17 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Mike Shah"
     },
@@ -731,7 +751,7 @@
       "date": "Wed Sep 17 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Marc Gregoire"
     },
@@ -741,7 +761,7 @@
       "date": "Wed Sep 17 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "John Lakos"
     },
@@ -751,7 +771,7 @@
       "date": "Wed Sep 17 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Crest 3/4/5",
       "category": "robotics",
       "speaker": "Jason Turner"
     },
@@ -761,7 +781,7 @@
       "date": "Wed Sep 17 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit 10/11",
       "category": "robotics",
       "speaker": "Eduardo Madrid"
     },
@@ -771,7 +791,7 @@
       "date": "Wed Sep 17 10:30:00 2025",
       "time": "10:30",
       "duration": 90,
-      "location": "Aurora BCD",
+      "location": "Aurora B/C/D",
       "category": "general",
       "speaker": "Herb Sutter"
     },
@@ -781,9 +801,19 @@
       "date": "Wed Sep 17 12:00:00 2025",
       "time": "12:00",
       "duration": 30,
-      "location": "CppCache",
+      "location": "Exhibit Hall",
       "category": "general",
       "speaker": "Andreas Fertig"
+    },
+    {
+      "id": "32dd7e43cae292e92ee22177dfdf148c",
+      "title": "Poster Presentations",
+      "date": "Wed Sep 17 12:30:00 2025",
+      "time": "12:30",
+      "duration": 60,
+      "location": "Exhibit Hall",
+      "category": "general",
+      "speaker": ""
     },
     {
       "id": "6a5f84a1f0979be5e82416a2aa0303de",
@@ -791,9 +821,19 @@
       "date": "Wed Sep 17 12:30:00 2025",
       "time": "12:30",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Raffaele Rossi"
+    },
+    {
+      "id": "02668699e18e6e87e49f4f456f35b26e",
+      "title": "Official ISO C++ WG21 SG meeting of low latency/embedded/games/finance and Machine Learning",
+      "date": "Wed Sep 17 13:00:00 2025",
+      "time": "13:00",
+      "duration": 210,
+      "location": "Summit  1",
+      "category": "embedded",
+      "speaker": "Michael Wong"
     },
     {
       "id": "23911c6dddfd7b087c9746acac8c029d",
@@ -801,7 +841,7 @@
       "date": "Wed Sep 17 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Jeff Garland"
     },
@@ -811,7 +851,7 @@
       "date": "Wed Sep 17 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Daniel Anderson"
     },
@@ -821,7 +861,7 @@
       "date": "Wed Sep 17 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Bill Hoffman"
     },
@@ -831,7 +871,7 @@
       "date": "Wed Sep 17 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  2/3",
       "category": "robotics",
       "speaker": "Ion Todirel"
     },
@@ -841,19 +881,9 @@
       "date": "Wed Sep 17 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Malin Stanescu"
-    },
-    {
-      "id": "384749bec839c75b81dc8abbdbaa9d34",
-      "title": "C++ Performance Tips: Cutting Down on Unnecessary Objects",
-      "date": "Wed Sep 17 15:15:00 2025",
-      "time": "15:15",
-      "duration": 60,
-      "location": "Stage 2",
-      "category": "general",
-      "speaker": "Prithvi Okade,Kathleen Baker"
     },
     {
       "id": "c44d0a1c8066ff000dd417f6163ec3aa",
@@ -861,9 +891,19 @@
       "date": "Wed Sep 17 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Peter Muldoon"
+    },
+    {
+      "id": "384749bec839c75b81dc8abbdbaa9d34",
+      "title": "C++ Performance Tips: Cutting Down on Unnecessary Objects",
+      "date": "Wed Sep 17 15:15:00 2025",
+      "time": "15:15",
+      "duration": 60,
+      "location": "Crest 3/4/5",
+      "category": "general",
+      "speaker": "Prithvi Okade,Kathleen Baker"
     },
     {
       "id": "bf221190d5e4011178fa88ae4627cc9f",
@@ -871,7 +911,7 @@
       "date": "Wed Sep 17 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Ignas Bagdonas"
     },
@@ -881,7 +921,7 @@
       "date": "Wed Sep 17 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Sebastian Theophil"
     },
@@ -891,7 +931,7 @@
       "date": "Wed Sep 17 15:15:00 2025",
       "time": "15:15",
       "duration": 30,
-      "location": "Stage 1",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Ruben Arts"
     },
@@ -901,7 +941,7 @@
       "date": "Wed Sep 17 15:50:00 2025",
       "time": "15:50",
       "duration": 30,
-      "location": "Stage 1",
+      "location": "Summit 10/11",
       "category": "robotics",
       "speaker": "Ben McMorran"
     },
@@ -911,7 +951,7 @@
       "date": "Wed Sep 17 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Greg Law"
     },
@@ -921,7 +961,7 @@
       "date": "Wed Sep 17 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Ruslan Arutyunyan"
     },
@@ -931,7 +971,7 @@
       "date": "Wed Sep 17 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Inbal Levi"
     },
@@ -941,7 +981,7 @@
       "date": "Wed Sep 17 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Bret Brown"
     },
@@ -951,7 +991,7 @@
       "date": "Wed Sep 17 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Matt Godbolt"
     },
@@ -971,17 +1011,17 @@
       "date": "Wed Sep 17 20:30:00 2025",
       "time": "20:30",
       "duration": 90,
-      "location": "Crest 3-5",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Michael Caisse"
     },
     {
       "id": "01f62e65719fa59cbbbd2e37ad66edee",
       "title": "The Evolution of a Logging Library",
-      "date": "Thu Sep 18 08:00:00 2025",
-      "time": "08:00",
-      "duration": 45,
-      "location": "Stage 1",
+      "date": "Thu Sep 18 07:45:00 2025",
+      "time": "07:45",
+      "duration": 60,
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Ben Deane"
     },
@@ -991,9 +1031,19 @@
       "date": "Thu Sep 18 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Andreas Fertig"
+    },
+    {
+      "id": "3803e955b9a6d9b7f58102835b387fa3",
+      "title": "Open Source Graphics Technologies at Pixar",
+      "date": "Thu Sep 18 09:00:00 2025",
+      "time": "09:00",
+      "duration": 60,
+      "location": "Summit  2/3",
+      "category": "general",
+      "speaker": "Sam Warring,An Wang"
     },
     {
       "id": "d18b28e13c9dff7c565e39b8e9aa0768",
@@ -1001,19 +1051,9 @@
       "date": "Thu Sep 18 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Bartosz Moczulski"
-    },
-    {
-      "id": "33ca8329e87d493f5a25f1e0916e7408",
-      "title": "Robotics on Microprocessors: A story of developing robotics controls software on an embedded ecosystem",
-      "date": "Thu Sep 18 09:00:00 2025",
-      "time": "09:00",
-      "duration": 60,
-      "location": "Stage 3",
-      "category": "embedded",
-      "speaker": "Stephen Brawner"
     },
     {
       "id": "4464fe08b5920be56ea616893ba776e1",
@@ -1021,7 +1061,7 @@
       "date": "Thu Sep 18 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Robert Leahy"
     },
@@ -1031,7 +1071,7 @@
       "date": "Thu Sep 18 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Roth Michaels"
     },
@@ -1041,7 +1081,7 @@
       "date": "Thu Sep 18 10:30:00 2025",
       "time": "10:30",
       "duration": 90,
-      "location": "Aurora BCD",
+      "location": "Aurora B/C/D",
       "category": "general",
       "speaker": "Vittorio Romeo"
     },
@@ -1051,7 +1091,7 @@
       "date": "Thu Sep 18 12:00:00 2025",
       "time": "12:00",
       "duration": 30,
-      "location": "CppCache",
+      "location": "Exhibit Hall",
       "category": "general",
       "speaker": "Jason Turner"
     },
@@ -1061,7 +1101,7 @@
       "date": "Thu Sep 18 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Kevin Carpenter"
     },
@@ -1071,7 +1111,7 @@
       "date": "Thu Sep 18 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Eran Gilad"
     },
@@ -1081,7 +1121,7 @@
       "date": "Thu Sep 18 14:00:00 2025",
       "time": "14:00",
       "duration": 30,
-      "location": "Stage 3",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Eric Brumer"
     },
@@ -1091,7 +1131,7 @@
       "date": "Thu Sep 18 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Aliaksei Sala"
     },
@@ -1101,7 +1141,7 @@
       "date": "Thu Sep 18 14:00:00 2025",
       "time": "14:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Prabhu Missier"
     },
@@ -1111,7 +1151,7 @@
       "date": "Thu Sep 18 14:35:00 2025",
       "time": "14:35",
       "duration": 30,
-      "location": "Stage 3",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Damien Buhl"
     },
@@ -1121,7 +1161,7 @@
       "date": "Thu Sep 18 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit 10/11",
       "category": "robotics",
       "speaker": "Katherine Rocha"
     },
@@ -1131,7 +1171,7 @@
       "date": "Thu Sep 18 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Koen Samyn"
     },
@@ -1141,7 +1181,7 @@
       "date": "Thu Sep 18 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Conor Spilsbury"
     },
@@ -1151,7 +1191,7 @@
       "date": "Thu Sep 18 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Kusha Maharshi"
     },
@@ -1161,9 +1201,9 @@
       "date": "Thu Sep 18 15:15:00 2025",
       "time": "15:15",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  6/7",
       "category": "general",
-      "speaker": "Mike Fairhurst,Peter Martin"
+      "speaker": "Peter Martin,Mike Fairhurst"
     },
     {
       "id": "990b0c3ca17a67c7f4643b55e699da07",
@@ -1171,7 +1211,7 @@
       "date": "Thu Sep 18 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  8/9",
       "category": "embedded",
       "speaker": "Rutvij Girish Karkhanis"
     },
@@ -1181,7 +1221,7 @@
       "date": "Thu Sep 18 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  2/3",
       "category": "gamedev",
       "speaker": "Michael Price"
     },
@@ -1191,7 +1231,7 @@
       "date": "Thu Sep 18 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Michelle Fae D'Souza"
     },
@@ -1201,7 +1241,7 @@
       "date": "Thu Sep 18 16:45:00 2025",
       "time": "16:45",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Alexsandro Thomas"
     },
@@ -1211,7 +1251,7 @@
       "date": "Thu Sep 18 16:45:00 2025",
       "time": "16:45",
       "duration": 30,
-      "location": "Stage 1",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Daniel Marjamäki"
     },
@@ -1221,9 +1261,19 @@
       "date": "Thu Sep 18 17:20:00 2025",
       "time": "17:20",
       "duration": 30,
-      "location": "Stage 1",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "VISHNU G NATH"
+    },
+    {
+      "id": "c48b9daedce98e2c42899c4d06f8975d",
+      "title": "Full Reg Reception",
+      "date": "Thu Sep 18 17:45:00 2025",
+      "time": "17:45",
+      "duration": 45,
+      "location": "Aurora A",
+      "category": "social",
+      "speaker": ""
     },
     {
       "id": "9cf214a873d7d4d28b53089c77e471be",
@@ -1241,9 +1291,19 @@
       "date": "Thu Sep 18 20:30:00 2025",
       "time": "20:30",
       "duration": 90,
-      "location": "Crest 3-5",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Michael Caisse"
+    },
+    {
+      "id": "88bc2e0ad3b86ee6f31921c6b68e59e1",
+      "title": "In search of meta data for compile time reflection.",
+      "date": "Fri Sep 19 08:00:00 2025",
+      "time": "08:00",
+      "duration": 45,
+      "location": "Summit  8/9",
+      "category": "general",
+      "speaker": "John Grillo"
     },
     {
       "id": "34531ff6d964e184f25fc6d42e120686",
@@ -1251,9 +1311,9 @@
       "date": "Fri Sep 19 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  2/3",
       "category": "general",
-      "speaker": "Sherry Sontag"
+      "speaker": ""
     },
     {
       "id": "1c2c1f81022ac55ea4320f90d619c623",
@@ -1261,7 +1321,7 @@
       "date": "Fri Sep 19 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Daniel Lemire,Francisco Geiman Thiesen"
     },
@@ -1271,7 +1331,7 @@
       "date": "Fri Sep 19 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Braden Ganetsky"
     },
@@ -1281,7 +1341,7 @@
       "date": "Fri Sep 19 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Elmar Westphal"
     },
@@ -1291,7 +1351,7 @@
       "date": "Fri Sep 19 09:00:00 2025",
       "time": "09:00",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Sarthak Sehgal"
     },
@@ -1301,7 +1361,7 @@
       "date": "Fri Sep 19 10:30:00 2025",
       "time": "10:30",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Ben Saks"
     },
@@ -1311,7 +1371,7 @@
       "date": "Fri Sep 19 10:30:00 2025",
       "time": "10:30",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Christopher Fretz"
     },
@@ -1321,7 +1381,7 @@
       "date": "Fri Sep 19 10:30:00 2025",
       "time": "10:30",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit 10/11",
       "category": "robotics",
       "speaker": "Andrei Zissu"
     },
@@ -1331,7 +1391,7 @@
       "date": "Fri Sep 19 10:30:00 2025",
       "time": "10:30",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Tsung-Wei (TW) Huang"
     },
@@ -1341,9 +1401,19 @@
       "date": "Fri Sep 19 10:30:00 2025",
       "time": "10:30",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Madeline Schneider"
+    },
+    {
+      "id": "2fb8a5b35011f598ec3cf8a322bbe9d6",
+      "title": "Implicit Conversions Considered Harmful?",
+      "date": "Fri Sep 19 12:00:00 2025",
+      "time": "12:00",
+      "duration": 60,
+      "location": "Crest 3/4/5",
+      "category": "general",
+      "speaker": "Jason Turner"
     },
     {
       "id": "5b1bbd7f037ac8fdcac5e141018c8dc0",
@@ -1351,7 +1421,7 @@
       "date": "Fri Sep 19 13:30:00 2025",
       "time": "13:30",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  8/9",
       "category": "general",
       "speaker": "Michael Caisse"
     },
@@ -1361,7 +1431,7 @@
       "date": "Fri Sep 19 13:30:00 2025",
       "time": "13:30",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  2/3",
       "category": "general",
       "speaker": "Mike Shah"
     },
@@ -1371,7 +1441,7 @@
       "date": "Fri Sep 19 13:30:00 2025",
       "time": "13:30",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Summit 10/11",
       "category": "robotics",
       "speaker": "Sergey Dobychin"
     },
@@ -1381,7 +1451,7 @@
       "date": "Fri Sep 19 13:30:00 2025",
       "time": "13:30",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Michael Maniscalco"
     },
@@ -1391,7 +1461,7 @@
       "date": "Fri Sep 19 13:30:00 2025",
       "time": "13:30",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Victor Ciura"
     },
@@ -1401,7 +1471,7 @@
       "date": "Fri Sep 19 14:45:00 2025",
       "time": "14:45",
       "duration": 60,
-      "location": "Stage 2",
+      "location": "Summit  2/3",
       "category": "embedded",
       "speaker": "Morten Winkler Jørgensen"
     },
@@ -1411,7 +1481,7 @@
       "date": "Fri Sep 19 14:45:00 2025",
       "time": "14:45",
       "duration": 60,
-      "location": "Stage 3",
+      "location": "Summit  8/9",
       "category": "gamedev",
       "speaker": "Tom Tesch"
     },
@@ -1421,7 +1491,7 @@
       "date": "Fri Sep 19 14:45:00 2025",
       "time": "14:45",
       "duration": 60,
-      "location": "Stage 4",
+      "location": "Crest 3/4/5",
       "category": "general",
       "speaker": "Sandor Dargo"
     },
@@ -1431,7 +1501,7 @@
       "date": "Fri Sep 19 14:45:00 2025",
       "time": "14:45",
       "duration": 60,
-      "location": "Stage 1",
+      "location": "Summit  6/7",
       "category": "general",
       "speaker": "Grischa Hauser"
     },
@@ -1441,7 +1511,7 @@
       "date": "Fri Sep 19 14:45:00 2025",
       "time": "14:45",
       "duration": 60,
-      "location": "Stage 5",
+      "location": "Summit 10/11",
       "category": "general",
       "speaker": "Juan Pedro Bolivar Puente"
     },
@@ -1451,7 +1521,7 @@
       "date": "Fri Sep 19 16:15:00 2025",
       "time": "16:15",
       "duration": 105,
-      "location": "Aurora BCD",
+      "location": "Aurora B/C/D",
       "category": "general",
       "speaker": "Matt Godbolt"
     },
@@ -1461,7 +1531,7 @@
       "date": "Sat Sep 20 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_2",
+      "location": "Summit  7",
       "category": "general",
       "speaker": "Fedor Pikus"
     },
@@ -1471,7 +1541,7 @@
       "date": "Sun Sep 21 09:00:00 2025",
       "time": "09:00",
       "duration": 480,
-      "location": "_2",
+      "location": "Summit  7",
       "category": "general",
       "speaker": "Fedor Pikus"
     },
