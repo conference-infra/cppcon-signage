@@ -6,6 +6,7 @@ class DigitalSignage {
         this.currentAdIndex = 0;
         this.adRotationInterval = 10000; // 10 seconds
         this.eventsUpdateInterval = 30000; // 30 seconds
+        this.categoryFilter = this.getCategoryFromURL();
         this.init();
     }
 
@@ -18,6 +19,11 @@ class DigitalSignage {
         // Update day display every minute
         setInterval(() => this.updateDayDisplay(), 1000);
         setInterval(() => this.loadEvents(), 1000);
+    }
+
+    getCategoryFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('category') || null;
     }
 
     updateDayDisplay() {
@@ -40,16 +46,32 @@ class DigitalSignage {
 
     updateEventsDisplay() {
         const eventsList = document.getElementById('events-list');
+        const sectionTitle = document.querySelector('.section-title');
         if (!eventsList) return;
+
+        // Update section title based on category filter
+        if (this.categoryFilter) {
+            const categoryName = this.categoryFilter.charAt(0).toUpperCase() + this.categoryFilter.slice(1);
+            if (sectionTitle) {
+                sectionTitle.textContent = `Upcoming ${categoryName} Events`;
+            }
+        } else {
+            if (sectionTitle) {
+                sectionTitle.textContent = 'Upcoming Events';
+            }
+        }
 
         const upcomingEvents = this.getUpcomingEvents();
         
         if (upcomingEvents.length === 0) {
+            const noEventsMessage = this.categoryFilter 
+                ? `No upcoming ${this.categoryFilter} events`
+                : 'No upcoming events';
             eventsList.innerHTML = `
                 <div class="event-item">
                     <div class="event-bullet"></div>
                     <div class="event-content">
-                        <div class="event-title">No upcoming events</div>
+                        <div class="event-title">${noEventsMessage}</div>
                         <div class="event-time">Check back later for updates</div>
                     </div>
                 </div>
@@ -64,12 +86,17 @@ class DigitalSignage {
     }
 
     getUpcomingEvents() {
-        const now = new Date("2025-09-15T09:00:00");
+        const now = new Date();
         const currentTime = now.getHours() * 60 + now.getMinutes();
         const currentDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][now.getDay()];
 
         return this.events
             .filter(event => {
+                // Filter by category if specified
+                if (this.categoryFilter && event.category !== this.categoryFilter) {
+                    return false;
+                }
+                
                 // Filter by day and time
                 const eventDate = new Date(event.date);
                 if (eventDate.getFullYear() !== now.getFullYear() ||
@@ -81,7 +108,7 @@ class DigitalSignage {
                 
                 // Show events that start within the next 4 hours or are currently happening
                 const timeDiff = eventMinutes - currentTime;
-                return true;//timeDiff >= -event.duration && timeDiff <= 240;
+                return timeDiff >= -event.duration && timeDiff <= 240;
             })
             .sort((a, b) => {
                 const timeA = this.parseTime(a.time);
@@ -191,4 +218,4 @@ document.addEventListener('keydown', (event) => {
 // Auto-refresh page every hour to ensure fresh data
 setInterval(() => {
     location.reload();
-}, 3600000); // 1 hour
+}, 60000); // 1 minute
