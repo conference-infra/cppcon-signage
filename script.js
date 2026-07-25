@@ -7,6 +7,8 @@ class DigitalSignage {
         this.adRotationInterval = 10000; // 10 seconds
         this.eventsUpdateInterval = 30000; // 30 seconds
         this.categoryFilter = this.getCategoryFromURL();
+        this.locationFilter = this.getLocationFromURL();
+        this.mockNow = this.getMockNowFromURL();
         this.init();
     }
 
@@ -26,9 +28,32 @@ class DigitalSignage {
         return urlParams.get('category') || null;
     }
 
+    getLocationFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('location') || null;
+    }
+
+    getMockNowFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const raw = urlParams.get('now');
+        if (!raw) return null;
+
+        const parsed = new Date(raw);
+        return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+
+    getNow() {
+        return this.mockNow ? new Date(this.mockNow.getTime()) : new Date();
+    }
+
+    // Schedule data contains inconsistent spacing, e.g. "Summit  8/9"
+    normalizeLocation(location) {
+        return (location || '').replace(/\s+/g, ' ').trim().toLowerCase();
+    }
+
     updateDayDisplay() {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const today = new Date();
+        const today = this.getNow();
         const dayName = days[today.getDay()];
         
         const dayElement = document.getElementById('current-day');
@@ -49,24 +74,14 @@ class DigitalSignage {
         const sectionTitle = document.querySelector('.section-title');
         if (!eventsList) return;
 
-        // Update section title based on category filter
-        if (this.categoryFilter) {
-            const categoryName = this.categoryFilter.charAt(0).toUpperCase() + this.categoryFilter.slice(1);
-            if (sectionTitle) {
-                sectionTitle.textContent = `Upcoming ${categoryName} Events`;
-            }
-        } else {
-            if (sectionTitle) {
-                sectionTitle.textContent = 'Upcoming Events';
-            }
+        if (sectionTitle) {
+            sectionTitle.textContent = this.buildEventsLabel('Upcoming', 'Events');
         }
 
         const upcomingEvents = this.getUpcomingEvents();
         
         if (upcomingEvents.length === 0) {
-            const noEventsMessage = this.categoryFilter 
-                ? `No upcoming ${this.categoryFilter} events`
-                : 'No upcoming events';
+            const noEventsMessage = this.buildEventsLabel('No upcoming', 'events');
             eventsList.innerHTML = `
                 <div class="event-item">
                     <div class="event-bullet"></div>
@@ -85,8 +100,16 @@ class DigitalSignage {
             .join('');
     }
 
+    buildEventsLabel(prefix, eventsWord) {
+        const category = this.categoryFilter
+            ? ` ${this.categoryFilter.charAt(0).toUpperCase()}${this.categoryFilter.slice(1)}`
+            : '';
+        const location = this.locationFilter ? ` in ${this.locationFilter}` : '';
+        return `${prefix}${category} ${eventsWord}${location}`;
+    }
+
     getUpcomingEvents() {
-        const now = new Date();
+        const now = this.getNow();
         const currentTime = now.getHours() * 60 + now.getMinutes();
         const currentDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][now.getDay()];
 
@@ -94,6 +117,11 @@ class DigitalSignage {
             .filter(event => {
                 // Filter by category if specified
                 if (this.categoryFilter && event.category !== this.categoryFilter) {
+                    return false;
+                }
+
+                if (this.locationFilter &&
+                    this.normalizeLocation(event.location) !== this.normalizeLocation(this.locationFilter)) {
                     return false;
                 }
                 

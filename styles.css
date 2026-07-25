@@ -284,6 +284,54 @@ body {
     margin-top: 0.25rem;
 }
 
+/* Locations Page */
+/* Unlike the signage page, this one is not overlaid on a background by the display */
+.locations-page {
+    overflow-y: auto;
+    background: #1a1a2e;
+}
+
+.locations-page .signage-container,
+.locations-page .middle-row {
+    height: auto;
+    min-height: 100vh;
+}
+
+.locations-page .middle-row {
+    justify-content: flex-start;
+}
+
+.locations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.location-item {
+    cursor: pointer;
+    border-color: rgb(112, 192, 219);
+}
+
+.location-item:hover,
+.location-item:focus-visible {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.location-name {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.location-count {
+    font-size: 1.5rem;
+    color: #fdb834;
+    font-weight: 400;
+    margin-top: 0.25rem;
+}
+
 /* Bottom Row: Ad Space */
 .bottom-row {
     height: 15vh;
