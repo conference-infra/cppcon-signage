@@ -16,18 +16,24 @@ class LocationPicker {
         const data = await response.json();
         const events = data.events || [];
 
+        // Group by slug so spacing variants of one room cannot split into two rows.
         const counts = new Map();
         for (const event of events) {
             if (!event.location) continue;
-            const entry = counts.get(event.location);
+            const slug = locationSlug(event.location);
+            if (!slug) continue;
+
+            const entry = counts.get(slug);
             if (entry) {
                 entry.count += 1;
             } else {
-                counts.set(event.location, { name: event.location, count: 1 });
+                counts.set(slug, { slug, name: locationDisplayName(event.location), count: 1 });
             }
         }
 
-        this.locations = [...counts.values()].sort((a, b) => a.name.localeCompare(b.name));
+        // Numeric collation keeps "Summit 9" ahead of "Summit 10".
+        this.locations = [...counts.values()]
+            .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
     }
 
     updateLocationsDisplay() {
@@ -54,7 +60,9 @@ class LocationPicker {
     }
 
     createLocationElement(location) {
-        const item = document.createElement('div');
+        // A button rather than a div so the kiosk is usable without a touchscreen.
+        const item = document.createElement('button');
+        item.type = 'button';
         item.className = 'event-item location-item';
         item.innerHTML = `
             <div class="event-bullet"></div>
@@ -64,7 +72,8 @@ class LocationPicker {
             </div>
         `;
         item.onclick = () => {
-            window.location.href = `index.html?location=${encodeURIComponent(location.name)}`;
+            // The slug is already URL-safe, so it needs no encoding.
+            window.location.href = `index.html?location=${location.slug}`;
         };
         return item;
     }

@@ -310,6 +310,13 @@ body {
 .location-item {
     cursor: pointer;
     border-color: rgb(112, 192, 219);
+    /* Reset the button defaults so it matches the .event-item cards. */
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+    border-style: solid;
+    border-width: 0 0 0 4px;
 }
 
 .location-item:hover,

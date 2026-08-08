@@ -7,7 +7,8 @@ class DigitalSignage {
         this.adRotationInterval = 10000; // 10 seconds
         this.eventsUpdateInterval = 30000; // 30 seconds
         this.categoryFilter = this.getCategoryFromURL();
-        this.locationFilter = this.getLocationFromURL();
+        this.locationParam = this.getLocationFromURL();
+        this.locationFilter = locationSlug(this.locationParam);
         this.mockNow = this.getMockNowFromURL();
         this.init();
     }
@@ -46,9 +47,12 @@ class DigitalSignage {
         return this.mockNow ? new Date(this.mockNow.getTime()) : new Date();
     }
 
-    // Schedule data contains inconsistent spacing, e.g. "Summit  8/9"
-    normalizeLocation(location) {
-        return (location || '').replace(/\s+/g, ' ').trim().toLowerCase();
+    // Display name for the active location filter, taken from the schedule so the
+    // sign shows "Summit 8/9" rather than the "summit-8-9" slug from the URL.
+    // Falls back to the raw parameter when nothing matches, so a typo is visible.
+    resolveLocationLabel() {
+        const match = this.events.find(event => locationSlug(event.location) === this.locationFilter);
+        return match ? locationDisplayName(match.location) : locationDisplayName(this.locationParam);
     }
 
     updateDayDisplay() {
@@ -104,7 +108,7 @@ class DigitalSignage {
         const category = this.categoryFilter
             ? ` ${this.categoryFilter.charAt(0).toUpperCase()}${this.categoryFilter.slice(1)}`
             : '';
-        const location = this.locationFilter ? ` in ${this.locationFilter}` : '';
+        const location = this.locationFilter ? ` in ${this.resolveLocationLabel()}` : '';
         return `${prefix}${category} ${eventsWord}${location}`;
     }
 
@@ -120,8 +124,7 @@ class DigitalSignage {
                     return false;
                 }
 
-                if (this.locationFilter &&
-                    this.normalizeLocation(event.location) !== this.normalizeLocation(this.locationFilter)) {
+                if (this.locationFilter && locationSlug(event.location) !== this.locationFilter) {
                     return false;
                 }
                 
