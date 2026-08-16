@@ -10,10 +10,12 @@ class DigitalSignage {
         this.locationParam = this.getLocationFromURL();
         this.locationFilter = locationSlug(this.locationParam);
         this.mockNow = this.getMockNowFromURL();
+        this.background = this.getBackgroundFromURL();
         this.init();
     }
 
     init() {
+        this.applyBackground();
         this.updateDayDisplay();
         this.loadEvents();
         this.setupAdRotation();
@@ -41,6 +43,24 @@ class DigitalSignage {
 
         const parsed = new Date(raw);
         return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+
+    getBackgroundFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const raw = urlParams.get('background');
+        if (!raw) return null;
+
+        const trimmed = raw.trim();
+        if (!trimmed) return null;
+
+        const color = /^[0-9a-fA-F]{3,8}$/.test(trimmed) ? `#${trimmed}` : trimmed;
+        return CSS.supports('color', color) ? color : null;
+    }
+
+    applyBackground() {
+        if (this.background) {
+            document.body.style.background = this.background;
+        }
     }
 
     getNow() {
