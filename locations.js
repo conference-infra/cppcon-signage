@@ -3,12 +3,40 @@
 class LocationPicker {
     constructor() {
         this.locations = [];
+        this.backgroundParam = this.getBackgroundParamFromURL();
+        this.background = this.getBackgroundFromURL();
         this.init();
     }
 
     async init() {
+        this.applyBackground();
         await this.loadLocations();
         this.updateLocationsDisplay();
+    }
+
+    getUrlParams() {
+        return new URLSearchParams(window.location.search);
+    }
+
+    getBackgroundParamFromURL() {
+        return this.getUrlParams().get('background');
+    }
+
+    getBackgroundFromURL() {
+        const raw = this.getBackgroundParamFromURL();
+        if (!raw) return null;
+
+        const trimmed = raw.trim();
+        if (!trimmed) return null;
+
+        const color = /^[0-9a-fA-F]{3,8}$/.test(trimmed) ? `#${trimmed}` : trimmed;
+        return CSS.supports('color', color) ? color : null;
+    }
+
+    applyBackground() {
+        if (this.background) {
+            document.body.style.background = this.background;
+        }
     }
 
     async loadLocations() {
@@ -72,8 +100,11 @@ class LocationPicker {
             </div>
         `;
         item.onclick = () => {
-            // The slug is already URL-safe, so it needs no encoding.
-            window.location.href = `index.html?location=${location.slug}`;
+            const params = new URLSearchParams({ location: location.slug });
+            if (this.backgroundParam) {
+                params.set('background', this.backgroundParam);
+            }
+            window.location.href = `index.html?${params.toString()}`;
         };
         return item;
     }
