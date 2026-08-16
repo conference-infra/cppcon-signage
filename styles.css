@@ -284,6 +284,47 @@ body {
     margin-top: 0.25rem;
 }
 
+/* Pointer / QR Code Pages */
+.pointer-slide,
+.qrcode-slide {
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    padding: 4vh 6vw;
+}
+
+.pointer-text,
+.qrcode-text {
+    font-size: clamp(4rem, 10vw, 12rem);
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    line-height: 1.1;
+    max-width: 90vw;
+}
+
+.pointer-arrow {
+    width: clamp(10rem, 40vh, 50rem);
+    height: clamp(10rem, 40vh, 50rem);
+    object-fit: contain;
+    transform-origin: center;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.qrcode-svg {
+    width: clamp(10rem, 50vh, 50rem);
+    height: clamp(10rem, 50vh, 50rem);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.qrcode-svg svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 /* Locations Page */
 /* Unlike the signage page, this one is not overlaid on a background by the display */
 .locations-page {
