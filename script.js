@@ -87,9 +87,9 @@ class DigitalSignage {
     }
 
     async loadEvents() {
-        const response = await fetch('schedule.json');
+        const response = await fetch('schedule2.json');
         const data = await response.json();
-        this.events = data.events || [];
+        this.evzents = data.events || [];
         this.updateEventsDisplay();
     }
 
