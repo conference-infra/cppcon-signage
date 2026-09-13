@@ -97,7 +97,6 @@ def test_json_schema():
                 "location": "Test Room",
                 "day": "Monday",
                 "type": "session",
-                "category": "general",
                 "speaker": "Test Speaker"
             }
         ]

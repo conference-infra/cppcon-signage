@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080">
+    <title>CppCon Digital Signage - Breakout</title>
+    <style>
+        @font-face {
+            font-family: 'Teko';
+            src: url('Teko-FontZillion/Fonts/teko-regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'Teko';
+            src: url('Teko-FontZillion/Fonts/teko-medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: 'Teko';
+            src: url('Teko-FontZillion/Fonts/teko-semibold.ttf') format('truetype');
+            font-weight: 600;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Teko', sans-serif;
+            background: transparent;
+            color: #ffffff;
+            overflow: hidden;
+            width: 1080px;
+            height: 1690px;
+        }
+
+        .breakout-container {
+            width: 1080px;
+            height: 1690px;
+            padding: 48px 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Room name on the left, clock on the right */
+        .breakout-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .room-name {
+            font-size: 72px;
+            font-weight: 600;
+            color: #fdb834;
+            line-height: 1;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .clock {
+            /* Monospace so the digits don't shift as they change; Teko has no tabular figures. */
+            font-family: ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+            font-size: 36px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+        }
+
+        .section-title {
+            font-size: 52px;
+            font-weight: 600;
+            color: #fdb834;
+            line-height: 1;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .card[hidden] {
+            display: none;
+        }
+
+        /* Ongoing: fixed height so the upcoming list never moves. */
+        .ongoing-card {
+            flex-shrink: 0;
+            height: 680px;
+            padding: 40px 48px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 48px;
+        }
+
+        .ongoing-tag {
+            align-self: flex-start;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.2;
+            background: #e53935;
+            border-radius: 8px;
+            padding: 4px 16px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .ongoing-tag[data-status="soon"] {
+            background: #1976d2;
+        }
+
+        /* Takes whatever height is left in the card; fitTitle() shrinks the text to fit it. */
+        .ongoing-title {
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+            font-size: 110px;
+            font-weight: 500;
+            line-height: 1.05;
+            overflow-wrap: break-word;
+        }
+
+        .event-details {
+            display: flex;
+            align-items: baseline;
+            gap: 32px;
+            margin-top: 24px;
+        }
+
+        .ongoing-card .event-details {
+            font-size: 44px;
+        }
+
+        .event-speaker {
+            flex: 1;
+            color: #fdb834;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .event-time {
+            color: #b0bec5;
+            white-space: nowrap;
+        }
+
+        .progress {
+            flex-shrink: 0;
+            height: 10px;
+            margin-top: 28px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: #fdb834;
+        }
+
+        .empty-card {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .empty-title {
+            font-size: 140px;
+            font-weight: 500;
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .empty-message {
+            font-size: 48px;
+            color: #b0bec5;
+        }
+
+        /* Up Next fills the rest of the 1690px; renderUpcoming() drops cards that don't fit. */
+        .upcoming-section {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .upcoming-list {
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .upcoming-card {
+            flex-shrink: 0;
+        }
+
+        .upcoming-card {
+            padding: 28px 40px;
+        }
+
+        .upcoming-title {
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 1.05;
+            overflow-wrap: break-word;
+            /* Long titles are cut at two lines so the list keeps a predictable height. */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .upcoming-card .event-details {
+            font-size: 36px;
+            margin-top: 12px;
+        }
+
+        /* Fills the Up Next space, styled like the empty-room message. */
+        .upcoming-empty {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 48px;
+            text-align: center;
+            font-size: 100px;
+            font-weight: 500;
+            line-height: 1.05;
+            overflow-wrap: break-word;
+        }
+
+        .upcoming-section[hidden] {
+            display: none;
+        }
+
+        /* Takes the place of the whole Up Next section, including its heading. */
+        .sponsor-card {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 48px;
+            text-align: center;
+        }
+
+        .sponsor-text {
+            font-size: 56px;
+            color: #b0bec5;
+            line-height: 1.1;
+        }
+
+        .sponsor-thanks {
+            font-size: 110px;
+        }
+
+        .sponsor-logo {
+            display: block;
+            margin: 32px 0;
+            width: 720px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="breakout-container">
+        <header class="breakout-header">
+            <h1 id="room-name" class="room-name"></h1>
+            <div id="clock" class="clock"></div>
+        </header>
+
+        <section id="ongoing-card" class="card ongoing-card" hidden>
+            <div id="ongoing-tag" class="ongoing-tag"></div>
+            <div id="ongoing-title" class="ongoing-title"></div>
+            <div class="event-details">
+                <div id="ongoing-speaker" class="event-speaker"></div>
+                <div id="ongoing-time" class="event-time"></div>
+            </div>
+            <div class="progress"><div id="progress-bar" class="progress-bar"></div></div>
+        </section>
+
+        <section id="empty-card" class="card ongoing-card empty-card" hidden>
+            <div class="empty-title">This room has been moved from</div>
+            <div class="empty-message">It is in a valid but unspecified state for now</div>
+        </section>
+
+        <section id="upcoming-section" class="upcoming-section">
+            <h2 class="section-title">Up Next</h2>
+            <div id="upcoming-list" class="upcoming-list"></div>
+        </section>
+
+        <!-- Replaces Up Next while a sponsored track's session is in the big box. -->
+        <section id="sponsor-card" class="card sponsor-card" hidden>
+            <div class="sponsor-text sponsor-thanks">Special thanks to</div>
+            <svg class="sponsor-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 24" role="img" aria-label="Optiver">
+                <path fill="#fff" d="M9.42,0C4.18.04-.04,4.31,0,9.55c.04,5.24,4.31,9.46,9.55,9.42h0c5.24-.04,9.46-4.31,9.42-9.55S14.66-.04,9.42,0M9.42,16.64c-1.88.02-3.69-.72-5.02-2.05-2.7-2.83-2.7-7.28,0-10.11,2.79-2.74,7.26-2.74,10.04,0,2.7,2.83,2.7,7.28,0,10.11-1.33,1.33-3.14,2.07-5.03,2.05M28.14,5.24c-2.1,0-3.8.86-4.91,2.5v-2.17h-2.36v18.43h2.36v-7.4c1.12,1.64,2.82,2.5,4.92,2.5,1.78,0,3.48-.72,4.71-2,2.61-2.77,2.61-7.09,0-9.86-1.23-1.28-2.93-2-4.71-2M27.83,7.52c2.57-.02,4.67,2.05,4.68,4.62s-2.05,4.67-4.62,4.68c-2.57.02-4.67-2.05-4.68-4.62,0-.01,0-.02,0-.03-.07-2.5,1.9-4.58,4.39-4.65.09,0,.17,0,.26,0h-.03ZM40.36,1.9l-2.36.7v2.97h-2.59v2.28h2.59v7.06c0,1.45.36,2.46,1.09,3.1.66.58,1.62.86,2.96.86.59,0,1.17-.05,1.76-.13h.03v-2.13h-.3c-1.38.06-2.29.11-2.78-.36-.28-.27-.41-.7-.41-1.37v-7.03h3.48v-2.29h-3.48V1.9ZM48.83,5.58h-2.36v13.18h2.36V5.58ZM47.66.13c-.87-.03-1.6.65-1.63,1.52-.03.87.65,1.6,1.52,1.63.04,0,.07,0,.11,0,.86,0,1.56-.7,1.56-1.56,0-.87-.69-1.58-1.56-1.59M57.33,16.18l-4.09-10.6h-2.55l5.26,13.16v.02h2.74l5.25-13.13.02-.05h-2.55l-4.09,10.6ZM71.13,5.24c-4,0-6.91,2.92-6.91,6.93-.04,1.84.66,3.62,1.94,4.95,1.29,1.3,3.07,1.98,5.12,1.98,2.5,0,4.57-1.06,5.8-2.98l.02-.03-1.97-1.12-.03-.02-.02.03c-.72,1.19-2.13,1.89-3.74,1.89-2.46,0-4.26-1.39-4.7-3.61h10.96v-.03c.05-.34.08-.68.08-1.03.02-1.79-.61-3.52-1.79-4.87-1.21-1.35-2.94-2.11-4.76-2.09M71.13,7.47c1.73,0,3.74.98,4.18,3.73h-8.66c.39-2.3,2.11-3.72,4.49-3.72M86.31,5.35c-1.9,0-3.3.8-4.05,2.31v-2.08h-2.36v13.18h2.36v-7c0-1.28.36-2.29,1.09-2.98.81-.7,1.87-1.05,2.95-.97h.04v-2.47h-.03Z"/>
+                <path fill="#f30" d="M107.96,17.95L99.68.33c-.09-.2-.3-.33-.52-.33h-1.54c-.23,0-.44.14-.53.36l-7.15,17.62c-.12.29.02.63.31.75.07.03.14.04.22.04h16.97c.32,0,.57-.26.57-.57,0-.08-.02-.17-.06-.25M97.82,7.75l3.52,7.51c.13.29,0,.63-.28.76-.08.03-.16.05-.24.05h-6.56c-.32,0-.57-.25-.57-.57,0-.07.01-.15.04-.22l3.04-7.51c.12-.29.46-.43.75-.31.13.05.23.15.29.28"/>
+            </svg>
+            <div class="sponsor-text">for sponsoring the Tooling &amp; Ecosystem track</div>
+        </section>
+    </div>
+
+    <script>
+        // Room sign for breakout rooms: the session happening now, then the rest of today's sessions.
+        // e.g. breakout.html?location=Homestead%201
+        // Optional parameters: ?now=<date> and ?speed=<multiplier> to mock the clock, ?background=<color>.
+
+        const TITLE_MAX_FONT_PX = 110;
+        const TITLE_MIN_FONT_PX = 48;
+        const UPCOMING_MAX = 3;
+        // How long before the start a session moves into the big box, and how long before
+        // the end it is marked as almost over.
+        const STARTING_SOON_MS = 5 * 60 * 1000;
+        const ALMOST_OVER_MS = 5 * 60 * 1000;
+
+        // While the session in the big box is in this track, Up Next is replaced by the sponsor card.
+        const SPONSORED_TYPE = 'Tooling & Ecosystem';
+        const SPONSORED_TAG = 'Breakouts';
+
+        const STATUS_LABELS = {
+            'soon': 'Starting soon',
+            'ongoing': 'Ongoing',
+            'almost-over': 'Almost over',
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        // Must match the schedule's location exactly, e.g. ?location=Homestead%201
+        const roomLocation = urlParams.get('location') || '';
+
+        // The clock starts at ?now= (or the real time) when the page loads and runs ?speed= times
+        // faster than real time, e.g. ?now=2026-09-12T08:50&speed=60 plays an hour per minute.
+        const pageLoadTime = Date.now();
+
+        const clockStart = (() => {
+            const raw = urlParams.get('now');
+            const parsed = raw ? new Date(raw) : null;
+            return parsed && !Number.isNaN(parsed.getTime()) ? parsed.getTime() : pageLoadTime;
+        })();
+
+        const clockSpeed = (() => {
+            const speed = Number(urlParams.get('speed'));
+            return Number.isFinite(speed) && speed > 0 ? speed : 1;
+        })();
+
+        function getNow() {
+            return new Date(clockStart + (Date.now() - pageLoadTime) * clockSpeed);
+        }
+
+        function applyBackground() {
+            const raw = (urlParams.get('background') || '').trim();
+            if (!raw) return;
+            const color = /^[0-9a-fA-F]{3,8}$/.test(raw) ? `#${raw}` : raw;
+            if (CSS.supports('color', color)) {
+                document.body.style.background = color;
+            }
+        }
+
+        function formatTime(date) {
+            return [date.getHours(), date.getMinutes()]
+                .map(part => part.toString().padStart(2, '0'))
+                .join(':');
+        }
+
+        function formatRange(event) {
+            return `${formatTime(event.start)} - ${formatTime(event.end)}`;
+        }
+
+        let events = [];
+
+        async function loadEvents() {
+            try {
+                const response = await fetch('schedule.json', { cache: 'no-cache' });
+                const data = await response.json();
+                events = (data.events || [])
+                    .filter(event => event.location === roomLocation)
+                    .map(event => {
+                        const start = new Date(event.date);
+                        return { ...event, start, end: new Date(start.getTime() + event.duration * 60000) };
+                    })
+                    .filter(event => !Number.isNaN(event.start.getTime()))
+                    .sort((a, b) => a.start - b.start);
+            } catch (error) {
+                // Keep showing the last schedule we had if a reload fails.
+                console.error('Failed to load schedule', error);
+            }
+            renderedKey = null;
+            render();
+        }
+
+        // The session for the big box: one in progress, otherwise one starting within STARTING_SOON_MS.
+        // A session in progress wins over the next one starting soon, since its audience is still
+        // in the room. If sessions overlap, the one that started most recently wins.
+        function findFeaturedEvent(now) {
+            let current = null;
+            for (const event of events) {
+                if (event.start <= now && now < event.end) current = event;
+            }
+            return current || events.find(event =>
+                event.start > now && event.start - now <= STARTING_SOON_MS);
+        }
+
+        function eventStatus(event, now) {
+            if (now < event.start) return 'soon';
+            if (event.end - now <= ALMOST_OVER_MS) return 'almost-over';
+            return 'ongoing';
+        }
+
+        function isSponsored(event) {
+            return event.type === SPONSORED_TYPE && event.tags === SPONSORED_TAG;
+        }
+
+        function findUpcomingEventsToday(now, featured) {
+            return events.filter(event =>
+                event !== featured &&
+                event.start > now &&
+                event.start.toDateString() === now.toDateString());
+        }
+
+        // Shrink long titles until they fit the space left in the fixed-height card.
+        function fitTitle(titleEl) {
+            let size = TITLE_MAX_FONT_PX;
+            titleEl.style.fontSize = `${size}px`;
+            while (titleEl.scrollHeight > titleEl.clientHeight && size > TITLE_MIN_FONT_PX) {
+                size -= 4;
+                titleEl.style.fontSize = `${size}px`;
+            }
+        }
+
+        function el(tag, className, text) {
+            const node = document.createElement(tag);
+            node.className = className;
+            node.textContent = text;
+            return node;
+        }
+
+        function createUpcomingCard(event) {
+            const card = el('div', 'card upcoming-card', '');
+            const details = el('div', 'event-details', '');
+            details.append(el('div', 'event-speaker', event.speaker || ''), el('div', 'event-time', formatRange(event)));
+            card.append(el('div', 'upcoming-title', event.title), details);
+            return card;
+        }
+
+        // Only rebuild the DOM when the displayed sessions change, not on every clock tick.
+        let renderedKey = null;
+
+        function render() {
+            const now = getNow();
+
+            document.getElementById('clock').textContent = [now.getHours(), now.getMinutes(), now.getSeconds()]
+                .map(part => part.toString().padStart(2, '0'))
+                .join(':');
+
+            const ongoing = findFeaturedEvent(now);
+            const upcoming = findUpcomingEventsToday(now, ongoing);
+            const key = [ongoing ? ongoing.id : '', ...upcoming.map(event => event.id)].join('|');
+
+            if (key !== renderedKey) {
+                renderedKey = key;
+                renderOngoing(ongoing);
+                const sponsored = Boolean(ongoing && isSponsored(ongoing));
+                document.getElementById('sponsor-card').hidden = !sponsored;
+                document.getElementById('upcoming-section').hidden = sponsored;
+                if (!sponsored) {
+                    renderUpcoming(upcoming.slice(0, UPCOMING_MAX));
+                }
+            }
+
+            if (ongoing) {
+                const status = eventStatus(ongoing, now);
+                const tag = document.getElementById('ongoing-tag');
+                if (tag.dataset.status !== status) {
+                    tag.dataset.status = status;
+                    tag.textContent = STATUS_LABELS[status];
+                }
+                const progress = Math.max(0, (now - ongoing.start) / (ongoing.end - ongoing.start));
+                document.getElementById('progress-bar').style.width = `${(progress * 100).toFixed(2)}%`;
+            }
+        }
+
+        function renderOngoing(event) {
+            document.getElementById('room-name').textContent = roomLocation;
+
+            const ongoingCard = document.getElementById('ongoing-card');
+            const emptyCard = document.getElementById('empty-card');
+
+            if (event) {
+                const titleEl = document.getElementById('ongoing-title');
+                titleEl.textContent = event.title;
+                document.getElementById('ongoing-speaker').textContent = event.speaker || '';
+                document.getElementById('ongoing-time').textContent = formatRange(event);
+                emptyCard.hidden = true;
+                ongoingCard.hidden = false;
+                fitTitle(titleEl);
+                return;
+            }
+
+            ongoingCard.hidden = true;
+            emptyCard.hidden = false;
+        }
+
+        function renderUpcoming(upcoming) {
+            const list = document.getElementById('upcoming-list');
+            list.replaceChildren(...upcoming.map(createUpcomingCard));
+            // Two-line titles make cards taller; show only whole cards rather than cutting one off.
+            while (list.childElementCount > 1 && list.scrollHeight > list.clientHeight) {
+                list.lastElementChild.remove();
+            }
+            if (upcoming.length === 0) {
+                list.append(el('div', 'card upcoming-empty','++it == sessions.end( )'));
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applyBackground();
+            loadEvents();
+            // Tick once per mocked second, but no faster than 20 times a real second.
+            setInterval(render, Math.max(50, 1000 / clockSpeed));
+            setInterval(loadEvents, 5 * 60 * 1000);
+            // Title fitting measures text, so redo it once Teko has replaced the fallback font.
+            document.fonts.ready.then(() => {
+                renderedKey = null;
+                render();
+            });
+        });
+    </script>
+</body>
+</html>

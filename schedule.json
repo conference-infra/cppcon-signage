@@ -1,7 +1,7 @@
 {
   "conference": {
-    "name": "CppCon 2025",
-    "dates": "September 10-24, 2025",
+    "name": "CppCon 2026",
+    "dates": "September 12-18, 2026",
     "location": "Aurora, Colorado"
   },
   "events": [
@@ -11,9 +11,10 @@
       "date": "Wed Sep  9 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Andreas Fertig"
+      "location": "",
+      "speaker": "Andreas Fertig",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "e51fee7d624ce45d14fa85a5b6399b00",
@@ -21,9 +22,10 @@
       "date": "Thu Sep 10 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Andreas Fertig"
+      "location": "",
+      "speaker": "Andreas Fertig",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "bd67fae6ad3c67f4e82ac82f22ac1020",
@@ -31,9 +33,10 @@
       "date": "Fri Sep 11 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Andreas Fertig"
+      "location": "",
+      "speaker": "Andreas Fertig",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "d27aa1f0e0018edae247e24b0e330127",
@@ -42,8 +45,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Homestead 1",
-      "category": "general",
-      "speaker": "Nicolai Josuttis"
+      "speaker": "Nicolai Josuttis",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "1eb28aea43603465450394e0abcceb3f",
@@ -52,8 +56,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Willow Lake 3",
-      "category": "general",
-      "speaker": "Jason Turner"
+      "speaker": "Jason Turner",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "c55f0cee179e9a284af7e4cb4e5de444",
@@ -62,8 +67,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Willow Lake 4",
-      "category": "general",
-      "speaker": "Fedor Pikus"
+      "speaker": "Fedor Pikus",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "d9623665e1d3886ce8bb033233a01157",
@@ -72,8 +78,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Willow Lake 5",
-      "category": "general",
-      "speaker": "Sherry Sontag"
+      "speaker": "Sherry Sontag",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "9ce2fe6037a1b26ca1f74917f9877bf5",
@@ -82,8 +89,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Homestead 1",
-      "category": "general",
-      "speaker": "Nicolai Josuttis"
+      "speaker": "Nicolai Josuttis",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "f812c1f7e0d31a744753ca8f98a16142",
@@ -92,8 +100,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Homestead 2",
-      "category": "robotics",
-      "speaker": "Jody Hagins"
+      "speaker": "Jody Hagins",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "1f915b389503da9f9d3d1dcf05ad2a76",
@@ -102,8 +111,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Willow Lake 3",
-      "category": "general",
-      "speaker": "Jason Turner"
+      "speaker": "Jason Turner",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "8c89216bed76b0909cd5e36be0dc95de",
@@ -112,8 +122,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Willow Lake 4",
-      "category": "general",
-      "speaker": "Fedor Pikus"
+      "speaker": "Fedor Pikus",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "694a7366f30bb6bd64f82a7735f4494d",
@@ -122,8 +133,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Willow Lake 5",
-      "category": "general",
-      "speaker": "Sherry Sontag"
+      "speaker": "Sherry Sontag",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "be1b0e433fc4643b052334c9e9f708f9",
@@ -132,8 +144,9 @@
       "time": "10:30",
       "duration": 330,
       "location": "Rockies Square",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Social",
+      "tags": ""
     },
     {
       "id": "92b87c05a1ca24510d3235d207749ca0",
@@ -142,18 +155,20 @@
       "time": "17:30",
       "duration": 150,
       "location": "Gaylord Rockies",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Social",
+      "tags": ""
     },
     {
       "id": "6dba0d03bd25bb05bfc7f1ad45de6066",
-      "title": "Registration Reception",
+      "title": "Registration Reception (Search Technology)",
       "date": "Sun Sep 13 20:00:00 2026",
       "time": "20:00",
       "duration": 120,
       "location": "Colorado Pre-function",
-      "category": "social",
-      "speaker": ""
+      "speaker": "",
+      "type": "Business",
+      "tags": ""
     },
     {
       "id": "bf0b540089dd41667bbc5e3c56f0fdb9",
@@ -162,8 +177,9 @@
       "time": "08:00",
       "duration": 30,
       "location": "CppCache",
-      "category": "registration",
-      "speaker": ""
+      "speaker": "",
+      "type": "Business",
+      "tags": ""
     },
     {
       "id": "7626a22d77eb36fadf65596077690883",
@@ -172,8 +188,9 @@
       "time": "08:30",
       "duration": 105,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Bjarne Stroustrup"
+      "speaker": "Bjarne Stroustrup",
+      "type": "Plenary",
+      "tags": "Plenary"
     },
     {
       "id": "c296a848f20d67274ac9b95083d47c0a",
@@ -182,8 +199,9 @@
       "time": "10:15",
       "duration": 15,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Social",
+      "tags": ""
     },
     {
       "id": "a9bd3e9d51d5e12fbb49ba47020f8302",
@@ -192,8 +210,9 @@
       "time": "11:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Ruslan Arutyunyan"
+      "speaker": "Ruslan Arutyunyan",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "878930017d75bac3d067534a72719bbf",
@@ -202,8 +221,9 @@
       "time": "11:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Aryan Naraghi"
+      "speaker": "Aryan Naraghi",
+      "type": "GameDev",
+      "tags": "Breakouts"
     },
     {
       "id": "5b58445ed90c30cab0b05a154f5c7b9f",
@@ -212,8 +232,9 @@
       "time": "11:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Michelle D'Souza"
+      "speaker": "Michelle D'Souza",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "acda079ee7c6398f88a7d2a22000990f",
@@ -222,8 +243,9 @@
       "time": "11:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Marc Gregoire"
+      "speaker": "Marc Gregoire",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "7369c6b68f00c7e8501060c8efd5331a",
@@ -232,8 +254,9 @@
       "time": "11:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Kevin Gomez"
+      "speaker": "Kevin Gomez",
+      "type": "Robotics & AI",
+      "tags": "Breakouts"
     },
     {
       "id": "c1fcc73fcde28ad26f9aadc3f2320428",
@@ -242,8 +265,9 @@
       "time": "11:00",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Andrew Drakeford"
+      "speaker": "Andrew Drakeford",
+      "type": "Scientific Computing",
+      "tags": "Breakouts"
     },
     {
       "id": "ca3781fe1cc5f940433bf4eee3019fc5",
@@ -252,8 +276,9 @@
       "time": "12:30",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Koen Samyn"
+      "speaker": "Koen Samyn",
+      "type": "Tooling & Ecosystem",
+      "tags": ""
     },
     {
       "id": "be6f84c5423d39b4e85f59f7ac716522",
@@ -262,8 +287,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Laurent Carlier"
+      "speaker": "Laurent Carlier",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "af8566d61d7a148f6ce9f70245c8c251",
@@ -272,8 +298,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Matt Kulukundis"
+      "speaker": "Matt Kulukundis",
+      "type": "Business & Career",
+      "tags": "Breakouts"
     },
     {
       "id": "fe50f6453737587d6b20b48f1c581c48",
@@ -282,8 +309,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "embedded",
-      "speaker": "Elbert Dockery"
+      "speaker": "Elbert Dockery",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "2acce234336e3d54b7a42d4435e4cbff",
@@ -292,8 +320,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Diego Rodriguez-Losada Gonzalez"
+      "speaker": "Diego Rodriguez-Losada Gonzalez",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "c6d3c30516183cf32278c0b94b8b75f8",
@@ -302,8 +331,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Timur Doumler"
+      "speaker": "Timur Doumler",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "15822dc7418c0a5555c2b54518bf72e1",
@@ -312,8 +342,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "robotics",
-      "speaker": "Divya Chandrasekar,Devpriya Dave"
+      "speaker": "Divya Chandrasekar,Devpriya Dave",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "d31b36e079b80666ad35ea18cd6767d4",
@@ -322,8 +353,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Alexsandro Thomas"
+      "speaker": "Alexsandro Thomas",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "b70a1639035db17371f822c03eba32a9",
@@ -332,8 +364,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Keith Stockdale"
+      "speaker": "Keith Stockdale",
+      "type": "GameDev",
+      "tags": "Breakouts"
     },
     {
       "id": "5e969999417ee382bb684298e196d703",
@@ -342,8 +375,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Ruslan Arutyunyan,Daniel Towner"
+      "speaker": "Ruslan Arutyunyan,Daniel Towner",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "86d1de6dd518b8c762d776fcec0f7f00",
@@ -352,8 +386,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Sanchit Gupta"
+      "speaker": "Sanchit Gupta",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "1891758261c75e93f788a95f4cac148e",
@@ -362,8 +397,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Cyril TISSIER"
+      "speaker": "Cyril TISSIER",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "0d8ba99bae6ac539d97d9efee660b6fb",
@@ -372,8 +408,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Henning Meyer"
+      "speaker": "Henning Meyer",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "7847490d080632b349abcaa62f16aff0",
@@ -382,8 +419,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Andreas Fertig"
+      "speaker": "Andreas Fertig",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "e284cef317c73418f20d71a2ee825469",
@@ -392,8 +430,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "embedded",
-      "speaker": "Arian Ajdari"
+      "speaker": "Arian Ajdari",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "9c4f3274c602d51cf32cbfa1d912d245",
@@ -402,8 +441,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "gamedev",
-      "speaker": "Koen Samyn"
+      "speaker": "Koen Samyn",
+      "type": "GameDev",
+      "tags": "Breakouts"
     },
     {
       "id": "6aeb9a493505691bf7b37a91f1fc3aa5",
@@ -412,8 +452,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "robotics",
-      "speaker": "David Li,Augustin Popa"
+      "speaker": "David Li,Augustin Popa",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "57d0f511f4a9692fca7151ed6f6f8792",
@@ -422,8 +463,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Colorado B",
-      "category": "robotics",
-      "speaker": "Mateusz Pusz"
+      "speaker": "Mateusz Pusz",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "b23fac39d130d5a884fdb1b06df70905",
@@ -432,8 +474,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "robotics",
-      "speaker": "Luis Caro Campos"
+      "speaker": "Luis Caro Campos",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "ba9d35426723a0f073e077fc770a1d74",
@@ -442,8 +485,9 @@
       "time": "19:00",
       "duration": 180,
       "location": "Mountain Pass Sports Bar",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Social",
+      "tags": ""
     },
     {
       "id": "482709dc67beba003e3e51d8eb1465ad",
@@ -452,8 +496,9 @@
       "time": "20:30",
       "duration": 90,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Andrei Alexandrescu,Bjarne Stroustrup,Braden Ganetsky,Gabriel Dos Reis,Guy Davidson,Jeff Garland,Nina Ranns,Ruslan Arutyunyan,Timur Doumler,Herb Sutter"
+      "speaker": "Andrei Alexandrescu,Bjarne Stroustrup,Braden Ganetsky,Gabriel Dos Reis,Guy Davidson,Jeff Garland,Nina Ranns,Ruslan Arutyunyan,Timur Doumler,Herb Sutter",
+      "type": "ISO / WG21",
+      "tags": ""
     },
     {
       "id": "f70bd36910e7b1f2fd499657d45f1a05",
@@ -462,8 +507,9 @@
       "time": "07:00",
       "duration": 120,
       "location": "Colorado C",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Social",
+      "tags": ""
     },
     {
       "id": "e4ae0622f32a10754c6504cf36d3aa9f",
@@ -472,8 +518,9 @@
       "time": "08:00",
       "duration": 45,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Justin Zaglio,Vincent Marsicano"
+      "speaker": "Justin Zaglio,Vincent Marsicano",
+      "type": "Business & Career",
+      "tags": ""
     },
     {
       "id": "06e3fcf49efb1bc47730eb5645c57618",
@@ -482,8 +529,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Fanchen Su"
+      "speaker": "Fanchen Su",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "4af4b89b2332cb1a3664fb4956617779",
@@ -492,8 +540,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Paul E. McKenney,Maged Michael,Michael Wong"
+      "speaker": "Paul E. McKenney,Maged Michael,Michael Wong",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "80b5c6d367729ba5e0b67bc907b89784",
@@ -502,8 +551,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Harold Bott"
+      "speaker": "Harold Bott",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "b9402138927600165faedea2e2950a66",
@@ -512,8 +562,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Carl Saldanha"
+      "speaker": "Carl Saldanha",
+      "type": "Robotics & AI",
+      "tags": "Breakouts"
     },
     {
       "id": "23b69cec2c8b5857149e22dab329c461",
@@ -522,8 +573,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "scientific",
-      "speaker": "Jorg Lotze"
+      "speaker": "Jorg Lotze",
+      "type": "Scientific Computing",
+      "tags": "Breakouts"
     },
     {
       "id": "efa7aa7b144217fdd422ba00dcc55b7f",
@@ -532,8 +584,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "robotics",
-      "speaker": "Sinem Akinci,Ben McMorran"
+      "speaker": "Sinem Akinci,Ben McMorran",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "31706adc7b7acd6cb30984ad05470b6e",
@@ -542,8 +595,9 @@
       "time": "10:30",
       "duration": 90,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Bjarne Stroustrup,Guido van Rossum,Mads Torgersen,Emma Tracey"
+      "speaker": "Bjarne Stroustrup,Guido van Rossum,Mads Torgersen,Emma Tracey",
+      "type": "Plenary",
+      "tags": "Plenary"
     },
     {
       "id": "aef82d032d4ae34021f3f3b93bc3deaa",
@@ -552,8 +606,9 @@
       "time": "12:30",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Brian Leone,Pri Trivedi"
+      "speaker": "Brian Leone,Pri Trivedi",
+      "type": "Business & Career",
+      "tags": ""
     },
     {
       "id": "58fa77af5dff0ea576e91b1996212696",
@@ -562,8 +617,9 @@
       "time": "12:30",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "robotics",
-      "speaker": "Sandor Dargo"
+      "speaker": "Sandor Dargo",
+      "type": "Tooling & Ecosystem",
+      "tags": ""
     },
     {
       "id": "21872eecee9b21baa94b22ae74a329ee",
@@ -572,8 +628,9 @@
       "time": "13:00",
       "duration": 55,
       "location": "Exhibit Hall",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Open Content",
+      "tags": ""
     },
     {
       "id": "7b01b1aca568e3badc0d1355a187735b",
@@ -582,8 +639,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Nicolai Josuttis"
+      "speaker": "Nicolai Josuttis",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "1c64b5ac9e21b7dcc4ddc6b54267d95d",
@@ -592,8 +650,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Robert Leahy"
+      "speaker": "Robert Leahy",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "6571f96504626e2242f46d4ff002bc28",
@@ -602,8 +661,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "gamedev",
-      "speaker": "Elias Farhan"
+      "speaker": "Elias Farhan",
+      "type": "GameDev",
+      "tags": "Breakouts"
     },
     {
       "id": "72f5c254787c26d165a2e7986a7cb9ef",
@@ -612,8 +672,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Matt Godbolt"
+      "speaker": "Matt Godbolt",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "613e4956a76f4105d5829cbafdb1fd22",
@@ -622,8 +683,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Erez Strauss"
+      "speaker": "Erez Strauss",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "bf7518ae9cbaeb638f80cc192be8219c",
@@ -632,8 +694,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Radoslav Zlatev"
+      "speaker": "Radoslav Zlatev",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "c764650f1cc4839281fd2b668d4d7469",
@@ -642,8 +705,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Greg Law"
+      "speaker": "Greg Law",
+      "type": "Business & Career",
+      "tags": "Breakouts"
     },
     {
       "id": "7607345579e3e79c0cf501a6c58ebda3",
@@ -652,8 +716,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Marcell Juhasz"
+      "speaker": "Marcell Juhasz",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "b2bb193ee2b2435c5d31869a88461926",
@@ -662,8 +727,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Colorado B",
-      "category": "robotics",
-      "speaker": "Jody Hagins"
+      "speaker": "Jody Hagins",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "82d31b680dea36f6f1be63af84c635b5",
@@ -672,8 +738,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Maxim Gurschi"
+      "speaker": "Maxim Gurschi",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "e79f213e1256279d8915581f6166a32b",
@@ -682,8 +749,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Shubhankar Gambhir"
+      "speaker": "Shubhankar Gambhir",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "0460c4cf82029d6892f5d3667432db89",
@@ -692,8 +760,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Paul Jansen"
+      "speaker": "Paul Jansen",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "cddf487a8a82fe36b6d66b7e2f37927f",
@@ -702,8 +771,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Kevin Carpenter"
+      "speaker": "Kevin Carpenter",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "1372acd187021b0a0f7353d4c22ba982",
@@ -712,8 +782,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Colorado A",
-      "category": "robotics",
-      "speaker": "Peter Muldoon"
+      "speaker": "Peter Muldoon",
+      "type": "Business & Career",
+      "tags": "Breakouts"
     },
     {
       "id": "296a9ef966008b5df99d6f4d498548fc",
@@ -722,8 +793,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Greg Law,Mark Williamson"
+      "speaker": "Greg Law,Mark Williamson",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "1a3012f241ff02893e02bf2bf5b0dc8f",
@@ -732,8 +804,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Marco Barbone"
+      "speaker": "Marco Barbone",
+      "type": "Scientific Computing",
+      "tags": "Breakouts"
     },
     {
       "id": "f17de4ebdbd23a7fa24ee2c4f4d51257",
@@ -742,8 +815,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Jan Wilczek"
+      "speaker": "Jan Wilczek",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "a7bd5d9de1ca9f9b422eafd1f40970ce",
@@ -752,8 +826,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Matheus Izvekov"
+      "speaker": "Matheus Izvekov",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "42f6971adba4a37b985f6b91cd0e29fa",
@@ -762,8 +837,9 @@
       "time": "18:30",
       "duration": 90,
       "location": "Red Rock 6/7",
-      "category": "robotics",
-      "speaker": "Mike Spertus"
+      "speaker": "Mike Spertus",
+      "type": "Tooling & Ecosystem",
+      "tags": ""
     },
     {
       "id": "cbc9af370f4a779bd0ad3f75e377e1d3",
@@ -772,8 +848,9 @@
       "time": "20:30",
       "duration": 90,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Social",
+      "tags": ""
     },
     {
       "id": "2009fddbfe1d197f75d9652dec3ea1ca",
@@ -782,8 +859,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Aditya Kumar"
+      "speaker": "Aditya Kumar",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "f5ceb7ac1676b3bffce481a14be9215f",
@@ -792,8 +870,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "robotics",
-      "speaker": "Mateusz Pusz"
+      "speaker": "Mateusz Pusz",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "a13091452453654ead004b171ea1dfc0",
@@ -802,8 +881,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Yannic Staudt"
+      "speaker": "Yannic Staudt",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "3c9b53507378811322dd8c10d6c9be5a",
@@ -812,8 +892,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "robotics",
-      "speaker": "Matt Kulukundis,Andy Soffer"
+      "speaker": "Matt Kulukundis,Andy Soffer",
+      "type": "Robotics & AI",
+      "tags": "Breakouts"
     },
     {
       "id": "62e6dfc715d2f4ce5e0d8dc1bf743274",
@@ -822,8 +903,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Ezra Stein"
+      "speaker": "Ezra Stein",
+      "type": "Scientific Computing",
+      "tags": "Breakouts"
     },
     {
       "id": "238dc161fd572d885681965e5d1b7035",
@@ -832,8 +914,9 @@
       "time": "10:30",
       "duration": 90,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Timur Doumler"
+      "speaker": "Timur Doumler",
+      "type": "Plenary",
+      "tags": ""
     },
     {
       "id": "8acd07b1d5596e733810030664a75372",
@@ -842,8 +925,9 @@
       "time": "12:30",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Nicolai Josuttis"
+      "speaker": "Nicolai Josuttis",
+      "type": "Software Design",
+      "tags": ""
     },
     {
       "id": "eedae5bfdb404c262d02e8632d4ab671",
@@ -852,8 +936,9 @@
       "time": "13:00",
       "duration": 210,
       "location": "Red Rock 1",
-      "category": "embedded",
-      "speaker": "Michael Wong"
+      "speaker": "Michael Wong",
+      "type": "ISO / WG21",
+      "tags": ""
     },
     {
       "id": "62cfd16dcd456e69e56a9b0012a3ecb1",
@@ -862,8 +947,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "embedded",
-      "speaker": "Andreas Fertig"
+      "speaker": "Andreas Fertig",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "ecb74f84fe7c7291356215a3721b3acc",
@@ -872,8 +958,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Eric Brumer"
+      "speaker": "Eric Brumer",
+      "type": "GameDev",
+      "tags": "Breakouts"
     },
     {
       "id": "fca8e03337ec84d66bc9346abdc4b2db",
@@ -882,8 +969,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Jason Turner"
+      "speaker": "Jason Turner",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "684e86e192803be36567ec0c978a9723",
@@ -892,8 +980,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Nicolas Arroyo"
+      "speaker": "Nicolas Arroyo",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "489ba815be5cc9e0eadc0ecbdd9055fb",
@@ -902,8 +991,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Dave Steffen"
+      "speaker": "Dave Steffen",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "437d7f735ac37726377aa6696b42a706",
@@ -912,8 +1002,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Damien Buhl"
+      "speaker": "Damien Buhl",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "84ad3dc15c0282e11f2dcd0700e903cc",
@@ -922,8 +1013,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Sarthak Sehgal"
+      "speaker": "Sarthak Sehgal",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "0ebed2252b02d1374e4ee0384baf1446",
@@ -932,8 +1024,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Nicolai Josuttis"
+      "speaker": "Nicolai Josuttis",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "1514672429623b4e05d05b1995d62779",
@@ -942,8 +1035,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "John Lakos"
+      "speaker": "John Lakos",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "2db8e37b50942b1cdf67b6a101f545e0",
@@ -952,8 +1046,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Futong Liu"
+      "speaker": "Futong Liu",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "45b45a0684e27956bedb257f80cf9c6c",
@@ -962,8 +1057,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Daniel Pfeifer"
+      "speaker": "Daniel Pfeifer",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "a291571d6dee30df815b6436e0116900",
@@ -972,8 +1068,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Anmol Singhal"
+      "speaker": "Anmol Singhal",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "5c47eeace9cf0463c9d19b76e2b7ed4c",
@@ -982,8 +1079,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Mike Shah"
+      "speaker": "Mike Shah",
+      "type": "GameDev",
+      "tags": "Breakouts"
     },
     {
       "id": "705b01fd5bea90c3801c3065c66c8599",
@@ -992,8 +1090,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "VISHNU G NATH"
+      "speaker": "VISHNU G NATH",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "b4bf7f061264636f6598ea1f4d6e9337",
@@ -1002,8 +1101,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Braden Ganetsky"
+      "speaker": "Braden Ganetsky",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "781e28603b78f9fdbca07c01b3f2a464",
@@ -1012,8 +1112,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Ofek Shilon"
+      "speaker": "Ofek Shilon",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "e1658b77eb2ba72597f95897d7616ac3",
@@ -1022,8 +1123,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Sandor Dargo"
+      "speaker": "Sandor Dargo",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "d70ea8f61e45c959adb8f1246d42355e",
@@ -1032,8 +1134,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Florent Castelli"
+      "speaker": "Florent Castelli",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "ec03d3375af4e1d0b5f16b8c5f21ed61",
@@ -1042,8 +1145,9 @@
       "time": "18:15",
       "duration": 165,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Open Content",
+      "tags": ""
     },
     {
       "id": "be516c848f90279967c47e82ae816d0a",
@@ -1052,8 +1156,9 @@
       "time": "21:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Open Content",
+      "tags": ""
     },
     {
       "id": "938c30c81974c4af29e0a1eadb886b06",
@@ -1062,8 +1167,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Roth Michaels"
+      "speaker": "Roth Michaels",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "7a55905e11130a44f3ea0ad98ca8fc09",
@@ -1072,8 +1178,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Vitaly Fanaskov"
+      "speaker": "Vitaly Fanaskov",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "4ddb17110826d91e37adbd94b0a5496b",
@@ -1082,8 +1189,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Vito Gamberini"
+      "speaker": "Vito Gamberini",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "93e9f8be54247a9cb45bad17521d591b",
@@ -1092,8 +1200,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Alistair Fisher,Ivy Zhang"
+      "speaker": "Alistair Fisher,Ivy Zhang",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "063731370df25dcf657a12a12905541b",
@@ -1102,8 +1211,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Sampad Acharya"
+      "speaker": "Sampad Acharya",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "b73694b0fea338e0d125fcbcc5eff3e5",
@@ -1112,8 +1222,9 @@
       "time": "09:00",
       "duration": 30,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Charlie Lin"
+      "speaker": "Charlie Lin",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "7fc6667c0e32af2d2e7db433168c8e8b",
@@ -1122,8 +1233,9 @@
       "time": "09:35",
       "duration": 30,
       "location": "Homestead 3/4",
-      "category": "robotics",
-      "speaker": "Ken Jin Ooi"
+      "speaker": "Ken Jin Ooi",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "60f994d52740340b1a8d62ca347ce6ca",
@@ -1132,8 +1244,9 @@
       "time": "10:30",
       "duration": 90,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Laurie Kirk"
+      "speaker": "Laurie Kirk",
+      "type": "Plenary",
+      "tags": "Plenary"
     },
     {
       "id": "588f43acde3b4c0cef4addab338ebc50",
@@ -1142,8 +1255,9 @@
       "time": "12:30",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "robotics",
-      "speaker": "Arnaud Becheler"
+      "speaker": "Arnaud Becheler",
+      "type": "Tooling & Ecosystem",
+      "tags": ""
     },
     {
       "id": "2b8aedefe525f812229cd3c875166381",
@@ -1152,8 +1266,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "robotics",
-      "speaker": "Alan Talbot"
+      "speaker": "Alan Talbot",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "29a79b4d46d65ff89c359380d3773c6d",
@@ -1162,8 +1277,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Alan de Freitas"
+      "speaker": "Alan de Freitas",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "6763fbbd76156ff96d0ba8b88ccba136",
@@ -1172,8 +1288,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Lieven de Cock"
+      "speaker": "Lieven de Cock",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "3dc1e54e39197a1a24953deedaea494b",
@@ -1182,8 +1299,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Egor Suvorov"
+      "speaker": "Egor Suvorov",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "e9722867ea23895ce08f8873ed62ee9c",
@@ -1192,8 +1310,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Steve Sorkin"
+      "speaker": "Steve Sorkin",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "a7819ff7960d841960f429187aee96ff",
@@ -1202,8 +1321,9 @@
       "time": "14:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Callum Piper"
+      "speaker": "Callum Piper",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "f92db0a98d32953328177295dbcdc153",
@@ -1212,8 +1332,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "robotics",
-      "speaker": "Alan Talbot"
+      "speaker": "Alan Talbot",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "e9d7a049aa00313458bb1f1e7b0f25f3",
@@ -1222,8 +1343,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Snikitha Siddavatam"
+      "speaker": "Snikitha Siddavatam",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "230cef9aaf66b111add54bd0b42bdf16",
@@ -1232,8 +1354,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Alex Dathskovsky"
+      "speaker": "Alex Dathskovsky",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "d94251d4f8740df57d95e75a9f27f3a4",
@@ -1242,8 +1365,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "tooling",
-      "speaker": "Ion Todirel"
+      "speaker": "Ion Todirel",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "a0c13dd017712fcee3cfaf8288935e57",
@@ -1252,8 +1376,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Oleksandr Bacherikov"
+      "speaker": "Oleksandr Bacherikov",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "4fdcfea746bb491f389257d0ab83f017",
@@ -1262,8 +1387,9 @@
       "time": "15:15",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Peter Muldoon"
+      "speaker": "Peter Muldoon",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "55439ce65fa46592630fb6c05acaf3af",
@@ -1272,8 +1398,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Mike Shah"
+      "speaker": "Mike Shah",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "3bcb1b7b6f4888d0c5e18e84db7e2f92",
@@ -1282,8 +1409,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Guy Davidson,Sherry Sontag"
+      "speaker": "Guy Davidson,Sherry Sontag",
+      "type": "Business & Career",
+      "tags": "Breakouts"
     },
     {
       "id": "1586a49d4cb7de6dbd70762bb6dfdc22",
@@ -1292,8 +1420,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Ryan Keane"
+      "speaker": "Ryan Keane",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "202bc85478237389823859cff76e5938",
@@ -1302,8 +1431,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "John Parent"
+      "speaker": "John Parent",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "5749910d6d81b2f5214bb8c97c1d2ca7",
@@ -1312,8 +1442,9 @@
       "time": "16:45",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Torben Thaysen"
+      "speaker": "Torben Thaysen",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "b5829e7355e8880c18fe7326f07f8df5",
@@ -1322,8 +1453,9 @@
       "time": "16:45",
       "duration": 30,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Kevin Gomez"
+      "speaker": "Kevin Gomez",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "98f8c6bdc5667df3834ca586d0725c5b",
@@ -1332,8 +1464,9 @@
       "time": "17:20",
       "duration": 30,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Tim van Deurzen"
+      "speaker": "Tim van Deurzen",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "86ee6f8ac36ac9089af10b95a20b9e60",
@@ -1342,8 +1475,9 @@
       "time": "18:30",
       "duration": 120,
       "location": "Colorado C/D",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Social",
+      "tags": ""
     },
     {
       "id": "f5ccdfd927d35935ec845786ff11c175",
@@ -1352,8 +1486,9 @@
       "time": "20:30",
       "duration": 90,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": ""
+      "speaker": "",
+      "type": "Open Content",
+      "tags": ""
     },
     {
       "id": "0e7e81235f79616bf1506cdc9dd45c15",
@@ -1362,8 +1497,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "general",
-      "speaker": "Ben Saks"
+      "speaker": "Ben Saks",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "def6f7b222a03f54a2b5dd64cbaca747",
@@ -1372,8 +1508,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Andrei Alexandrescu"
+      "speaker": "Andrei Alexandrescu",
+      "type": "Business & Career",
+      "tags": "Breakouts"
     },
     {
       "id": "8b7c2f0b4b76af418029874f8e576c57",
@@ -1382,8 +1519,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Kris Jusiak"
+      "speaker": "Kris Jusiak",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "fb3494fe48fad4084d2c32e5f3f3af77",
@@ -1392,8 +1530,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Bill Hoffman"
+      "speaker": "Bill Hoffman",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "3182eb3646855bdf889ec0289b1f72be",
@@ -1402,8 +1541,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Jason Turner"
+      "speaker": "Jason Turner",
+      "type": "Scientific Computing",
+      "tags": "Breakouts"
     },
     {
       "id": "5b785a9f2b0090ef43cb42a682896444",
@@ -1412,8 +1552,9 @@
       "time": "09:00",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Jon Kalb"
+      "speaker": "Jon Kalb",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "a8e6416fe28cfc765f389fddb0a294c8",
@@ -1422,8 +1563,9 @@
       "time": "10:30",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "embedded",
-      "speaker": "Darijo Topic"
+      "speaker": "Darijo Topic",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "a36b90408b047277c4dd659e44e589d6",
@@ -1432,8 +1574,9 @@
       "time": "10:30",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Andy Webber"
+      "speaker": "Andy Webber",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "5cc1c37d75481c37391feaa184ec54c1",
@@ -1442,8 +1585,9 @@
       "time": "10:30",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Nahuel Espinosa"
+      "speaker": "Nahuel Espinosa",
+      "type": "Robotics & AI",
+      "tags": "Breakouts"
     },
     {
       "id": "b186ee7aa5687836f769f6a787a14835",
@@ -1452,8 +1596,9 @@
       "time": "10:30",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "Matt Borland"
+      "speaker": "Matt Borland",
+      "type": "Scientific Computing",
+      "tags": "Breakouts"
     },
     {
       "id": "88eabd805594fd263d239e2a12811523",
@@ -1462,8 +1607,9 @@
       "time": "10:30",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Jessica Ding"
+      "speaker": "Jessica Ding",
+      "type": "Software Design",
+      "tags": "Breakouts"
     },
     {
       "id": "55ac03b29439caab2d8e2a6a37d288dd",
@@ -1472,8 +1618,9 @@
       "time": "10:30",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Ilya Ermakov,Brian Rudo-Hutt,Ruifeng Zhang"
+      "speaker": "Ilya Ermakov,Brian Rudo-Hutt,Ruifeng Zhang",
+      "type": "Tooling & Ecosystem",
+      "tags": "Breakouts"
     },
     {
       "id": "97453f82dc54e4e77c76e30608f98c57",
@@ -1482,8 +1629,9 @@
       "time": "12:00",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Dave Steffen"
+      "speaker": "Dave Steffen",
+      "type": "Software Design",
+      "tags": ""
     },
     {
       "id": "6d99bfa541751f723c03e8367412dcea",
@@ -1492,8 +1640,9 @@
       "time": "13:30",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "general",
-      "speaker": "chris ryan"
+      "speaker": "chris ryan",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "6c5671e9d22164981b2f34db696260b5",
@@ -1502,8 +1651,9 @@
       "time": "13:30",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Chris Croft-White,Mike Shah"
+      "speaker": "Chris Croft-White,Mike Shah",
+      "type": "Business & Career",
+      "tags": "Breakouts"
     },
     {
       "id": "1b7a6ecb136259314490364675400e64",
@@ -1512,8 +1662,9 @@
       "time": "13:30",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Ignas Bagdonas"
+      "speaker": "Ignas Bagdonas",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "8d236fd97e9cb5204edfa4e0d052e6d7",
@@ -1522,8 +1673,9 @@
       "time": "13:30",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "Sandor Dargo"
+      "speaker": "Sandor Dargo",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "d394c960ce0cfed3ec6d603d8b180c27",
@@ -1532,8 +1684,9 @@
       "time": "13:30",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "robotics",
-      "speaker": "Matthew Butler"
+      "speaker": "Matthew Butler",
+      "type": "Robotics & AI",
+      "tags": "Breakouts"
     },
     {
       "id": "06126704a779bdcdf71ff56fc646511b",
@@ -1542,8 +1695,9 @@
       "time": "13:30",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "robotics",
-      "speaker": "Robert Leahy"
+      "speaker": "Robert Leahy",
+      "type": "Scientific Computing",
+      "tags": "Breakouts"
     },
     {
       "id": "143de37214db907b041635ffe2e113fd",
@@ -1552,8 +1706,9 @@
       "time": "14:45",
       "duration": 60,
       "location": "Willow Lake 3/4/5",
-      "category": "general",
-      "speaker": "Amir Kirsh"
+      "speaker": "Amir Kirsh",
+      "type": "Back to Basics",
+      "tags": "Breakouts"
     },
     {
       "id": "d3e39cea0cc6b1361c02d1fc40804af3",
@@ -1562,8 +1717,9 @@
       "time": "14:45",
       "duration": 60,
       "location": "Red Rock 6/7",
-      "category": "general",
-      "speaker": "John Pavan"
+      "speaker": "John Pavan",
+      "type": "Business & Career",
+      "tags": "Breakouts"
     },
     {
       "id": "799b843930501048f1a90ac419478cb6",
@@ -1572,8 +1728,9 @@
       "time": "14:45",
       "duration": 60,
       "location": "Homestead 3/4",
-      "category": "embedded",
-      "speaker": "Michael Caisse"
+      "speaker": "Michael Caisse",
+      "type": "Embedded",
+      "tags": "Breakouts"
     },
     {
       "id": "ae1af7f2979984ffae75bd1fb7f0bb2f",
@@ -1582,8 +1739,9 @@
       "time": "14:45",
       "duration": 60,
       "location": "Red Rock 8/9",
-      "category": "gamedev",
-      "speaker": "Tom Tesch"
+      "speaker": "Tom Tesch",
+      "type": "GameDev",
+      "tags": "Breakouts"
     },
     {
       "id": "653ffeb98c266f7b167ea4f1025ef2b0",
@@ -1592,8 +1750,9 @@
       "time": "14:45",
       "duration": 60,
       "location": "Colorado A",
-      "category": "general",
-      "speaker": "Matt Godbolt"
+      "speaker": "Matt Godbolt",
+      "type": "General",
+      "tags": "Breakouts"
     },
     {
       "id": "d5262700e6e39dcd684393eaf304603f",
@@ -1602,8 +1761,9 @@
       "time": "14:45",
       "duration": 60,
       "location": "Colorado B",
-      "category": "general",
-      "speaker": "Fedor Pikus"
+      "speaker": "Fedor Pikus",
+      "type": "Scientific Computing",
+      "tags": "Breakouts"
     },
     {
       "id": "2c8ca8db44586b1f093a4e24dccdec0f",
@@ -1612,8 +1772,9 @@
       "time": "16:15",
       "duration": 105,
       "location": "Colorado A",
-      "category": "robotics",
-      "speaker": "Herb Sutter"
+      "speaker": "Herb Sutter",
+      "type": "Plenary",
+      "tags": "Plenary"
     },
     {
       "id": "5a1b2da159d9b3c2ab25ff23ee72af78",
@@ -1622,8 +1783,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Red Rock 5",
-      "category": "robotics",
-      "speaker": "Jody Hagins"
+      "speaker": "Jody Hagins",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "56dbc3e7d57e3cc2de1d9e32f708e782",
@@ -1632,8 +1794,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Red Rock 6",
-      "category": "general",
-      "speaker": "Jeff Garland"
+      "speaker": "Jeff Garland",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "653ca26327ff6d5438e018a6e209a557",
@@ -1642,8 +1805,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Red Rock 7",
-      "category": "general",
-      "speaker": "Fedor Pikus"
+      "speaker": "Fedor Pikus",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "04d31c7088a00aaabe0634a837b688af",
@@ -1652,8 +1816,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Red Rock 5",
-      "category": "robotics",
-      "speaker": "Jody Hagins"
+      "speaker": "Jody Hagins",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "d383c079411d649cdae932328f9312dc",
@@ -1662,8 +1827,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Red Rock 6",
-      "category": "general",
-      "speaker": "Jeff Garland"
+      "speaker": "Jeff Garland",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "9c16d3ba89bfe3101628579c1c245c9b",
@@ -1672,8 +1838,9 @@
       "time": "09:00",
       "duration": 495,
       "location": "Red Rock 7",
-      "category": "general",
-      "speaker": "Fedor Pikus"
+      "speaker": "Fedor Pikus",
+      "type": "Education and Coaching",
+      "tags": "Academy"
     },
     {
       "id": "b56dcb91fedb5131dd6019403bfff2e4",
@@ -1681,9 +1848,10 @@
       "date": "Mon Sep 21 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Mateusz Pusz"
+      "location": "",
+      "speaker": "Mateusz Pusz",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "b1463b6aebecd2f86172d11b7f0905fa",
@@ -1691,9 +1859,10 @@
       "date": "Mon Sep 21 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Nicolai Josuttis"
+      "location": "",
+      "speaker": "Nicolai Josuttis",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "5a50b6f117fc14512a330b3c750e0172",
@@ -1701,9 +1870,10 @@
       "date": "Tue Sep 22 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Mateusz Pusz"
+      "location": "",
+      "speaker": "Mateusz Pusz",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "a627143d5b66c75d4288a1871e69cadd",
@@ -1711,9 +1881,10 @@
       "date": "Tue Sep 22 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Nicolai Josuttis"
+      "location": "",
+      "speaker": "Nicolai Josuttis",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "4aee4eed789ed22c4a6c9194ea24b115",
@@ -1721,9 +1892,10 @@
       "date": "Wed Sep 23 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Mateusz Pusz"
+      "location": "",
+      "speaker": "Mateusz Pusz",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "6178141d785d9f0d3387bb30a97f18b4",
@@ -1731,9 +1903,10 @@
       "date": "Wed Sep 23 09:00:00 2026",
       "time": "09:00",
       "duration": 360,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Nicolai Josuttis"
+      "location": "",
+      "speaker": "Nicolai Josuttis",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "caf7ddd2c77a959c5540225bbba10d75",
@@ -1741,9 +1914,10 @@
       "date": "Sat Sep 26 09:00:00 2026",
       "time": "09:00",
       "duration": 480,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Patrice Roy"
+      "location": "",
+      "speaker": "Patrice Roy",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "bcd4030ab323342d175533233653b602",
@@ -1751,9 +1925,10 @@
       "date": "Sun Sep 27 09:00:00 2026",
       "time": "09:00",
       "duration": 480,
-      "location": "TBA",
-      "category": "general",
-      "speaker": "Patrice Roy"
+      "location": "",
+      "speaker": "Patrice Roy",
+      "type": "Education and Coaching",
+      "tags": ""
     }
   ]
 }

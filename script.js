@@ -3,32 +3,23 @@
 class DigitalSignage {
     constructor() {
         this.events = [];
-        this.currentAdIndex = 0;
-        this.adRotationInterval = 10000; // 10 seconds
-        this.eventsUpdateInterval = 30000; // 30 seconds
-        this.categoryFilter = this.getCategoryFromURL();
+        this.eventsUpdateInterval = 1000; // 1 second
         this.locationParam = this.getLocationFromURL();
         this.locationFilter = locationSlug(this.locationParam);
-        this.mockNow = this.getMockNowFromURL();
+        // Offset from the real clock, so a mocked ?now= keeps ticking after page load.
+        const mockNow = this.getMockNowFromURL();
+        this.clockOffset = mockNow ? mockNow.getTime() - Date.now() : 0;
         this.background = this.getBackgroundFromURL();
         this.init();
     }
 
     init() {
         this.applyBackground();
-        this.updateDayDisplay();
+        this.updateClock();
+        setInterval(() => this.updateClock(), 1000);
         this.loadEvents();
-        this.setupAdRotation();
         this.setupEventUpdates();
-        
-        // Update day display every minute
-        setInterval(() => this.updateDayDisplay(), 1000);
-        setInterval(() => this.loadEvents(), 1000);
-    }
-
-    getCategoryFromURL() {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get('category') || null;
+        //setInterval(() => this.loadEvents(), 1000);
     }
 
     getLocationFromURL() {
@@ -64,7 +55,17 @@ class DigitalSignage {
     }
 
     getNow() {
-        return this.mockNow ? new Date(this.mockNow.getTime()) : new Date();
+        return new Date(Date.now() + this.clockOffset);
+    }
+
+    updateClock() {
+        const clock = document.getElementById('clock');
+        if (!clock) return;
+
+        const now = this.getNow();
+        clock.textContent = [now.getHours(), now.getMinutes(), now.getSeconds()]
+            .map(part => part.toString().padStart(2, '0'))
+            .join(':');
     }
 
     // Display name for the active location filter, taken from the schedule so the
@@ -75,22 +76,12 @@ class DigitalSignage {
         return match ? locationDisplayName(match.location) : locationDisplayName(this.locationParam);
     }
 
-    updateDayDisplay() {
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const today = this.getNow();
-        const dayName = days[today.getDay()];
-        
-        const dayElement = document.getElementById('current-day');
-        if (dayElement) {
-            dayElement.innerHTML = `${dayName}<br>${today.toLocaleTimeString()}`;
-        }
-    }
-
     async loadEvents() {
         const response = await fetch('schedule.json');
         const data = await response.json();
         this.events = data.events || [];
         this.updateEventsDisplay();
+        await fetch('schedule.json', { cache: 'reload' });
     }
 
     updateEventsDisplay() {
@@ -108,7 +99,6 @@ class DigitalSignage {
             const noEventsMessage = this.buildEventsLabel('No upcoming', 'events');
             eventsList.innerHTML = `
                 <div class="event-item">
-                    <div class="event-bullet"></div>
                     <div class="event-content">
                         <div class="event-title">${noEventsMessage}</div>
                         <div class="event-time">Check back later for updates</div>
@@ -119,31 +109,22 @@ class DigitalSignage {
         }
 
         eventsList.innerHTML = upcomingEvents
-            .slice(0, 6) // Show max 6 events
+            .slice(0, 2) // Show max 2 events
             .map(event => this.createEventHTML(event))
             .join('');
     }
 
     buildEventsLabel(prefix, eventsWord) {
-        const category = this.categoryFilter
-            ? ` ${this.categoryFilter.charAt(0).toUpperCase()}${this.categoryFilter.slice(1)}`
-            : '';
         const location = this.locationFilter ? ` in ${this.resolveLocationLabel()}` : '';
-        return `${prefix}${category} ${eventsWord}${location}`;
+        return `${prefix} ${eventsWord}${location}`;
     }
 
     getUpcomingEvents() {
         const now = this.getNow();
         const currentTime = now.getHours() * 60 + now.getMinutes();
-        const currentDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][now.getDay()];
 
         return this.events
             .filter(event => {
-                // Filter by category if specified
-                if (this.categoryFilter && event.category !== this.categoryFilter) {
-                    return false;
-                }
-
                 if (this.locationFilter && locationSlug(event.location) !== this.locationFilter) {
                     return false;
                 }
@@ -157,9 +138,10 @@ class DigitalSignage {
                 const eventTime = this.parseTime(event.time);
                 const eventMinutes = eventTime.hours * 60 + eventTime.minutes;
                 
-                // Show events that start within the next 4 hours or are currently happening
+                // Show events that start within the next 4 hours or are currently happening.
+                // currentTime is whole minutes, so an event ending at 10:00 disappears at 10:00:00.
                 const timeDiff = eventMinutes - currentTime;
-                return timeDiff >= -event.duration && timeDiff <= 240;
+                return timeDiff > -event.duration && timeDiff <= 240;
             })
             .sort((a, b) => {
                 const timeA = this.parseTime(a.time);
@@ -176,16 +158,24 @@ class DigitalSignage {
     createEventHTML(event) {
         const startTime = this.parseTime(event.time);
         const endTime = this.calculateEndTime(startTime, event.duration);
-        const category = event.category || 'general';
-        
+        // The room is redundant when the page is already filtered to one location.
+        const locationHTML = this.locationFilter ? '' : `<div class="event-location">${event.location}</div>`;
+        // Only today's unfinished events reach here, so any that has started is ongoing.
+        const now = this.getNow();
+        const ongoing = startTime.hours * 60 + startTime.minutes <= now.getHours() * 60 + now.getMinutes();
+
+        const ongoingHTML = ongoing ? '<div class="event-ongoing">Ongoing</div>' : '';
+
         return `
-            <div class="event-item event-item-${category}">
-                <div class="event-bullet event-bullet-${category}"></div>
+            <div class="event-item${ongoing ? ' event-item-ongoing' : ''}">
                 <div class="event-content">
                     <div class="event-title">${event.title}</div>
-                    <div class="event-time">${event.time} - ${endTime.hours.toString().padStart(2, '0')}:${endTime.minutes.toString().padStart(2, '0')} (${event.duration} min)</div>
-                    <div class="event-location">${event.location}</div>
-                    <div class="event-speaker">${event.speaker? event.speaker : ''}</div>
+                    <div class="event-details">
+                        <div class="event-speaker">${event.speaker? event.speaker : ''}</div>
+                        ${locationHTML}
+                        ${ongoingHTML}
+                        <div class="event-time">${event.time} - ${endTime.hours.toString().padStart(2, '0')}:${endTime.minutes.toString().padStart(2, '0')}</div>
+                    </div>
                 </div>
             </div>
         `;
@@ -204,69 +194,9 @@ class DigitalSignage {
             this.updateEventsDisplay();
         }, this.eventsUpdateInterval);
     }
-
-    setupAdRotation() {
-        // Sample SVG ads - replace with actual ad SVGs
-        const sampleAds = [
-            `<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="100" fill="#1a1a2e" stroke="#4fc3f7" stroke-width="2"/>
-                <text x="150" y="35" text-anchor="middle" fill="#4fc3f7" font-family="Arial, sans-serif" font-size="16" font-weight="bold">CppCon 2025</text>
-                <text x="150" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">The Premier C++ Conference</text>
-                <text x="150" y="75" text-anchor="middle" fill="#81c784" font-family="Arial, sans-serif" font-size="10">September 15-19, 2025</text>
-            </svg>`,
-            `<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="100" fill="#16213e" stroke="#81c784" stroke-width="2"/>
-                <text x="150" y="35" text-anchor="middle" fill="#81c784" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Workshop Registration</text>
-                <text x="150" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">Limited spots available</text>
-                <text x="150" y="75" text-anchor="middle" fill="#4fc3f7" font-family="Arial, sans-serif" font-size="10">Register at cppcon.org</text>
-            </svg>`,
-            `<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="100" fill="#0f3460" stroke="#ff9800" stroke-width="2"/>
-                <text x="150" y="35" text-anchor="middle" fill="#ff9800" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Networking Event</text>
-                <text x="150" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">Tonight at 7:00 PM</text>
-                <text x="150" y="75" text-anchor="middle" fill="#4fc3f7" font-family="Arial, sans-serif" font-size="10">Main Conference Hall</text>
-            </svg>`
-        ];
-
-        const adBanner = document.getElementById('ad-banner');
-        if (!adBanner) return;
-
-        const rotateAd = () => {
-            adBanner.classList.add('fade-transition');
-            
-            setTimeout(() => {
-                adBanner.innerHTML = sampleAds[this.currentAdIndex];
-                this.currentAdIndex = (this.currentAdIndex + 1) % sampleAds.length;
-                adBanner.classList.remove('fade-transition');
-            }, 250);
-        };
-
-        // Show first ad immediately
-        rotateAd();
-
-        // Rotate ads every interval
-        setInterval(rotateAd, this.adRotationInterval);
-    }
 }
 
 // Initialize the digital signage when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     new DigitalSignage();
 });
-
-// Handle fullscreen mode for digital signage
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'F11') {
-        event.preventDefault();
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-        } else {
-            document.exitFullscreen();
-        }
-    }
-});
-
-// Auto-refresh page every hour to ensure fresh data
-setInterval(() => {
-    location.reload();
-}, 60000); // 1 minute

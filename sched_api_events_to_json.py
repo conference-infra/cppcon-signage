@@ -27,87 +27,10 @@ class CppConAPIFetcher:
         self.events = []
         self.count = 0
 
-    def determine_category(
-        self, title: str, session_type: str = "", tags: str = ""
-    ) -> str:
-        """Determine the event category based on title, type, and tags."""
-        title_lower = title.lower()
-        type_lower = session_type.lower()
-        tags_lower = tags.lower()
-
-        # Check for specific categories
-        if (
-            "embedded" in type_lower
-            or "embedded" in title_lower
-            or "embedded" in tags_lower
-        ):
-            return "embedded"
-        elif (
-            "gamedev" in type_lower or "game" in title_lower or "gamedev" in tags_lower
-        ):
-            return "gamedev"
-        elif (
-            "scientific" in type_lower
-            or "scientific" in title_lower
-            or "scientific" in tags_lower
-        ):
-            return "scientific"
-        elif (
-            "robotics" in type_lower or "ai" in title_lower or "robotics" in tags_lower
-        ):
-            return "robotics"
-        elif "business" in type_lower or "business" in tags_lower:
-            return "business"
-        elif (
-            "tooling" in type_lower or "tool" in title_lower or "tooling" in tags_lower
-        ):
-            return "tooling"
-        elif "iso" in type_lower or "wg21" in type_lower or "iso" in tags_lower:
-            return "iso"
-        elif "back to basics" in type_lower or "basics" in tags_lower:
-            return "basics"
-        elif (
-            "education" in type_lower
-            or "workshop" in type_lower
-            or "education" in tags_lower
-        ):
-            return "education"
-        elif (
-            "social" in type_lower
-            or "reception" in title_lower
-            or "dinner" in title_lower
-            or "social" in tags_lower
-        ):
-            return "social"
-        elif "keynote" in title_lower or "keynote" in type_lower:
-            return "keynote"
-        elif "registration" in title_lower or "registration" in type_lower:
-            return "registration"
-        else:
-            return "general"
-
     def extract_location(self, title: str, venue: str = "", address: str = "") -> str:
         """Extract location from venue, address, or title."""
-        if "[Online]" in title:
-            return "Online"
 
-        # Use venue if available
-        if venue and venue.strip() and venue.strip() != "TBA":
-            return venue.strip()
-
-        # Use address if venue is not available
-        if address and address.strip() and address.strip() != "TBA":
-            return address.strip()
-
-        # Fallback locations based on common patterns
-        if "Aurora" in venue or "Aurora" in address:
-            return "Aurora A"
-        elif "Gaylord" in venue or "Gaylord" in address:
-            return "Gaylord Rockies"
-        elif "Stage" in venue or "Stage" in address:
-            return venue or address
-        else:
-            return "TBA"
+        return venue.strip()
 
     def parse_datetime(self, datetime_str: str) -> datetime:
         """Parse datetime string from Sched API format (YYYY-MM-DD HH:MM)."""
@@ -161,13 +84,6 @@ class CppConAPIFetcher:
                     session.get("address", ""),
                 )
 
-                # Determine category
-                category = self.determine_category(
-                    session.get("name", ""),
-                    session.get("session_type", ""),
-                    session.get("tags", ""),
-                )
-
                 # Create event object
                 event = {
                     "id": session.get("id", self.count),
@@ -176,14 +92,13 @@ class CppConAPIFetcher:
                     "time": start_time.strftime("%H:%M"),
                     "duration": duration,
                     "location": location,
-                    "category": category,
                     "speaker": ",".join(
                         [s.get("name", "") for s in session.get("speakers", [])]
                     ),
                     # "description": session.get('description', ''),
-                    # "session_type": session.get('session_type', ''),
+                    "type": session.get("event_type", ""),
                     # "session_subtype": session.get('session_subtype', ''),
-                    # "tags": session.get('tags', ''),
+                    "tags": session.get("tags", ""),
                     # "media_url": session.get('media_url', ''),
                     # "rsvp_url": session.get('rsvp_url', ''),
                     # "seats": session.get('seats', ''),
@@ -204,8 +119,8 @@ class CppConAPIFetcher:
         # Create the final JSON structure
         schedule_data = {
             "conference": {
-                "name": "CppCon 2025",
-                "dates": "September 10-24, 2025",
+                "name": "CppCon 2026",
+                "dates": "September 12-18, 2026",
                 "location": "Aurora, Colorado",
             },
             "events": events,
