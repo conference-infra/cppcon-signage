@@ -496,7 +496,7 @@
       "time": "20:30",
       "duration": 90,
       "location": "Colorado A",
-      "speaker": "Andrei Alexandrescu,Bjarne Stroustrup,Braden Ganetsky,Gabriel Dos Reis,Guy Davidson,Jeff Garland,Nina Ranns,Ruslan Arutyunyan,Timur Doumler,Herb Sutter",
+      "speaker": "Andrei Alexandrescu,Bjarne Stroustrup,Braden Ganetsky,Gabriel Dos Reis,Jeff Garland,Nina Ranns,Ruslan Arutyunyan,Guy Davidson,Timur Doumler",
       "type": "ISO / WG21",
       "tags": ""
     },
@@ -916,6 +916,17 @@
       "location": "Colorado A",
       "speaker": "Timur Doumler",
       "type": "Plenary",
+      "tags": ""
+    },
+    {
+      "id": "376035b5706ab06ae68e986a6b45d4ea",
+      "title": "QRT Community Lunch",
+      "date": "Wed Sep 16 12:00:00 2026",
+      "time": "12:00",
+      "duration": 120,
+      "location": "Colorado C",
+      "speaker": "",
+      "type": "Social",
       "tags": ""
     },
     {
