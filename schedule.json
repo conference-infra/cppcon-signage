@@ -765,6 +765,17 @@
       "tags": "Breakouts"
     },
     {
+      "id": "b20e30bdc2062a8c043974239dcccd22",
+      "title": "Author Signing: Andreas Fertig",
+      "date": "Tue Sep 15 16:15:00 2026",
+      "time": "16:15",
+      "duration": 30,
+      "location": "Exhibit Hall",
+      "speaker": "",
+      "type": "Education and Coaching",
+      "tags": ""
+    },
+    {
       "id": "cddf487a8a82fe36b6d66b7e2f37927f",
       "title": "Back to Basics: std::unordered_map",
       "date": "Tue Sep 15 16:45:00 2026",
@@ -937,7 +948,7 @@
       "duration": 60,
       "location": "Red Rock 6/7",
       "speaker": "Nicolai Josuttis",
-      "type": "Software Design",
+      "type": "Education and Coaching",
       "tags": ""
     },
     {
@@ -1172,6 +1183,17 @@
       "tags": ""
     },
     {
+      "id": "fefe142f573e281b2cf6809f1f26b02e",
+      "title": "[Open Content] Shaping the C++29 Standard Library: The Beman Project and Beyond.",
+      "date": "Thu Sep 17 08:00:00 2026",
+      "time": "08:00",
+      "duration": 45,
+      "location": "Red Rock 6/7",
+      "speaker": "Jeff Garland",
+      "type": "Tooling & Ecosystem",
+      "tags": ""
+    },
+    {
       "id": "938c30c81974c4af29e0a1eadb886b06",
       "title": "Back to Basics: Lambdas, Function Objects, and std::function",
       "date": "Thu Sep 17 09:00:00 2026",
@@ -1258,6 +1280,17 @@
       "speaker": "Laurie Kirk",
       "type": "Plenary",
       "tags": "Plenary"
+    },
+    {
+      "id": "7ccf1f5012958fb9c012e6f705cbbdc7",
+      "title": "Author Signing: Jason Turner",
+      "date": "Thu Sep 17 12:15:00 2026",
+      "time": "12:15",
+      "duration": 30,
+      "location": "Exhibit Hall",
+      "speaker": "",
+      "type": "Education and Coaching",
+      "tags": ""
     },
     {
       "id": "588f43acde3b4c0cef4addab338ebc50",
