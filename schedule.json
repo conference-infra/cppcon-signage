@@ -771,7 +771,7 @@
       "time": "16:15",
       "duration": 30,
       "location": "Exhibit Hall",
-      "speaker": "",
+      "speaker": "Andreas Fertig",
       "type": "Education and Coaching",
       "tags": ""
     },
@@ -945,10 +945,10 @@
       "title": "[Open Content] C++23: Ask Me Anything and Book Signing",
       "date": "Wed Sep 16 12:30:00 2026",
       "time": "12:30",
-      "duration": 60,
+      "duration": 45,
       "location": "Red Rock 6/7",
       "speaker": "Nicolai Josuttis",
-      "type": "Education and Coaching",
+      "type": "Open Content",
       "tags": ""
     },
     {
@@ -960,6 +960,17 @@
       "location": "Red Rock 1",
       "speaker": "Michael Wong",
       "type": "ISO / WG21",
+      "tags": ""
+    },
+    {
+      "id": "618340e022af02942d77682f512dfda2",
+      "title": "Author Signing: Nicolai Josuttis",
+      "date": "Wed Sep 16 13:15:00 2026",
+      "time": "13:15",
+      "duration": 30,
+      "location": "Exhibit Hall",
+      "speaker": "Nicolai Josuttis",
+      "type": "Education and Coaching",
       "tags": ""
     },
     {
@@ -1288,7 +1299,7 @@
       "time": "12:15",
       "duration": 30,
       "location": "Exhibit Hall",
-      "speaker": "",
+      "speaker": "Jason Turner",
       "type": "Education and Coaching",
       "tags": ""
     },
