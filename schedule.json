@@ -1557,17 +1557,6 @@
       "tags": "Breakouts"
     },
     {
-      "id": "def6f7b222a03f54a2b5dd64cbaca747",
-      "title": "The Next 20 Weeks of Systems Engineering",
-      "date": "Fri Sep 18 09:00:00 2026",
-      "time": "09:00",
-      "duration": 60,
-      "location": "Colorado B",
-      "speaker": "Andrei Alexandrescu",
-      "type": "Business & Career",
-      "tags": "Breakouts"
-    },
-    {
       "id": "8b7c2f0b4b76af418029874f8e576c57",
       "title": "“If You Can’t Measure It, You Can’t Improve It”: From Profiling to Automatic Benchmarking",
       "date": "Fri Sep 18 09:00:00 2026",
@@ -1821,15 +1810,15 @@
       "tags": "Breakouts"
     },
     {
-      "id": "2c8ca8db44586b1f093a4e24dccdec0f",
-      "title": "C++: Growing in a world of efficiency, safety, and AI",
+      "id": "def6f7b222a03f54a2b5dd64cbaca747",
+      "title": "The Next 20 Weeks of Systems Engineering",
       "date": "Fri Sep 18 16:15:00 2026",
       "time": "16:15",
       "duration": 105,
       "location": "Colorado A",
-      "speaker": "Herb Sutter",
-      "type": "Plenary",
-      "tags": "Plenary"
+      "speaker": "Andrei Alexandrescu",
+      "type": "Business & Career",
+      "tags": "Breakouts"
     },
     {
       "id": "5a1b2da159d9b3c2ab25ff23ee72af78",
