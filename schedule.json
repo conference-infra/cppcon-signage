@@ -1667,6 +1667,17 @@
       "tags": "Breakouts"
     },
     {
+      "id": "e10774315328f31b5431c9639d49d5fe",
+      "title": "[Open Content] std::bitcoin",
+      "date": "Fri Sep 18 12:00:00 2026",
+      "time": "12:00",
+      "duration": 60,
+      "location": "Red Rock 8/9",
+      "speaker": "Daniel Pfeifer",
+      "type": "Open Content",
+      "tags": ""
+    },
+    {
       "id": "97453f82dc54e4e77c76e30608f98c57",
       "title": "[Open Content] Refactoring C++ : Techniques, Smells, and Discussion",
       "date": "Fri Sep 18 12:00:00 2026",
@@ -1811,7 +1822,7 @@
     },
     {
       "id": "def6f7b222a03f54a2b5dd64cbaca747",
-      "title": "The Next 20 Weeks of Systems Engineering",
+      "title": "Your Next 20 Days of Systems Engineering",
       "date": "Fri Sep 18 16:15:00 2026",
       "time": "16:15",
       "duration": 105,
